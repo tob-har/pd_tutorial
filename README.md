@@ -1,2 +1,5 @@
-# pd_tutorial
-Pure Data Tutorial - KHM Köln
+# Pure Data Tutorial 
+KHM Köln SoSe 2018
+
+
+
