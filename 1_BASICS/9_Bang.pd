@@ -1,0 +1,50 @@
+#N canvas 183 26 677 611 10;
+#X text 34 19 BANG;
+#X text 34 49 In Pd \, to bang means to trigger an action!;
+#X obj 40 135 bang;
+#X obj 40 160 print;
+#X floatatom 40 95 5 0 0 0 - - -, f 5;
+#X obj 41 259 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X obj 41 338 print;
+#X obj 73 289 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X text 147 264 The bang GUI: Put BANG or shift+cmd+b;
+#X floatatom 41 207 5 0 0 0 - - -, f 5;
+#X msg 88 206 hello world;
+#X msg 95 96 hello world;
+#X obj 217 208 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 40 524 print;
+#X floatatom 40 496 5 0 0 0 - - -, f 5;
+#X msg 40 398 set 123;
+#X obj 129 429 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X msg 101 398 set 321;
+#X text 189 391 set a value in the number box bang triggers the number
+box to output to print object;
+#X obj 226 487 loadbang;
+#X msg 226 524 3;
+#X floatatom 226 546 5 0 0 0 - - -, f 5;
+#X msg 288 524 3;
+#X floatatom 288 546 5 0 0 0 - - -, f 5;
+#X text 321 484 loadbang sends a bang on patch startup!;
+#X text 142 130 The bang object put out a bang trigger \, NO MATTER
+WAHT it receives!;
+#X obj 184 207 b;
+#X connect 2 0 3 0;
+#X connect 4 0 2 0;
+#X connect 5 0 6 0;
+#X connect 5 0 7 0;
+#X connect 9 0 5 0;
+#X connect 10 0 5 0;
+#X connect 11 0 2 0;
+#X connect 12 0 5 0;
+#X connect 14 0 13 0;
+#X connect 15 0 14 0;
+#X connect 16 0 14 0;
+#X connect 17 0 14 0;
+#X connect 19 0 20 0;
+#X connect 20 0 21 0;
+#X connect 22 0 23 0;
+#X connect 26 0 5 0;

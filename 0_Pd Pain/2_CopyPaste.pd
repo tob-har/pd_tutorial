@@ -1,0 +1,6 @@
+#N canvas 427 480 615 328 10;
+#X text 176 48 Put a Message. Select with mouse square! Copy: cmd +
+c Paste: cmd + v ...annoying... :(;
+#X msg 78 46 2;
+#X text 174 123 Tip: Select \, Copy \, paste \, then move with arrow
+keys! (shift + arrow keys moves in bigger steps);

@@ -1,0 +1,16 @@
+#N canvas 147 394 490 392 10;
+#X msg 255 88 1;
+#X msg 113 87 2;
+#X msg 184 87 3;
+#X obj 255 157 print;
+#X obj 113 156 print;
+#X obj 184 156 print;
+#X obj 255 42 loadbang;
+#X obj 113 42 loadbang;
+#X obj 184 42 loadbang;
+#X connect 0 0 3 0;
+#X connect 1 0 4 0;
+#X connect 2 0 5 0;
+#X connect 6 0 0 0;
+#X connect 7 0 1 0;
+#X connect 8 0 2 0;

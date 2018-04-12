@@ -1,0 +1,11 @@
+#N canvas 221 239 450 300 10;
+#X msg 28 89 \; pd dsp 1;
+#X obj 28 65 loadbang;
+#X text 27 23 Turn on Digital Signal Processing in Main PD Window on
+startup !!!;
+#X msg 28 205 \; pd dsp \$1;
+#X obj 28 182 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X text 25 159 ... or manually within the patcher:;
+#X connect 1 0 0 0;
+#X connect 4 0 3 0;
