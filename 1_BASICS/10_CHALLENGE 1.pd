@@ -6,7 +6,7 @@ in the terminal window.;
 in the terminal window only when a bang triggers it.;
 #X text 37 153 3) Remeber: right click on objects offers help... and
 gives acces to the propertiers! Change the look of the bang GUI:;
-#X obj 229 210 bng 40 50 20 0 2 empty button 5 20 0 8 -258113 -4034
+#X obj 229 210 bng 40 400 20 0 2 empty button 5 20 0 8 -258113 -4034
 -4034;
 #X obj 165 229 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
 -1 -1;

@@ -13,7 +13,7 @@
 #X floatatom 41 207 5 0 0 0 - - -, f 5;
 #X msg 88 206 hello world;
 #X msg 95 96 hello world;
-#X obj 217 208 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+#X obj 188 208 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
 -1 -1;
 #X obj 40 524 print;
 #X floatatom 40 496 5 0 0 0 - - -, f 5;
@@ -31,7 +31,9 @@ box to output to print object;
 #X text 321 484 loadbang sends a bang on patch startup!;
 #X text 142 130 The bang object put out a bang trigger \, NO MATTER
 WAHT it receives!;
-#X obj 184 207 b;
+#X obj 222 207 b;
+#X obj 222 181 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
 #X connect 2 0 3 0;
 #X connect 4 0 2 0;
 #X connect 5 0 6 0;
@@ -48,3 +50,4 @@ WAHT it receives!;
 #X connect 20 0 21 0;
 #X connect 22 0 23 0;
 #X connect 26 0 5 0;
+#X connect 27 0 26 0;

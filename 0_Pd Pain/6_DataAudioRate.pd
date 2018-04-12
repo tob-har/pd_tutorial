@@ -10,7 +10,7 @@
 #X obj 29 218 osc~ 333;
 #X text 28 26 Pure Data distinguishes between two control rates for
 connecting objects: control data and audio signal. Control data is
-sent via thin cabels Audio signals are sent via thick cabels.;
+sent via thin cabels. Audio signals are sent via thick cabels.;
 #X connect 1 0 0 0;
 #X connect 3 0 2 0;
 #X connect 5 0 4 0;
