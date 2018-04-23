@@ -1,0 +1,40 @@
+#N canvas 140 29 599 566 10;
+#X obj 63 147 vradio 15 1 0 8 empty empty empty 0 -8 0 10 -262144 -33289
+-1 7;
+#X text 56 35 RADIO Gui (from old radio station selector buttons);
+#X obj 111 79 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X obj 43 339 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X floatatom 75 315 5 0 0 0 - - -, f 5;
+#X msg 138 86 3;
+#X floatatom 172 98 5 0 0 0 - - -, f 5;
+#X text 253 205 Click the radio to output a correspondent number value
+;
+#X text 234 87 Input a number value to set the correspondent radio
+and output the value;
+#X obj 123 207 hradio 15 1 0 8 empty empty empty 0 -8 0 10 -262144
+-1 -1 5;
+#X obj 107 251 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X floatatom 137 264 5 0 0 0 - - -, f 5;
+#X obj 192 235 hsl 128 15 0 7 0 0 empty empty empty -2 -8 0 10 -262144
+-1 -1 9071 1;
+#X obj 190 270 hradio 15 1 0 8 empty empty right_click_edit_for_COLORS_and_more
+0 -8 0 10 -261682 -4034 -159808 5;
+#X msg 201 165 set 5;
+#X text 244 167 Again: Set + Value \, changes but does NOT trigger
+;
+#X connect 0 0 4 0;
+#X connect 0 0 3 0;
+#X connect 2 0 0 0;
+#X connect 2 0 9 0;
+#X connect 5 0 0 0;
+#X connect 5 0 9 0;
+#X connect 6 0 0 0;
+#X connect 6 0 9 0;
+#X connect 9 0 10 0;
+#X connect 9 0 11 0;
+#X connect 9 0 12 0;
+#X connect 9 0 13 0;
+#X connect 14 0 9 0;

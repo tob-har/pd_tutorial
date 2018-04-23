@@ -1,0 +1,46 @@
+#N canvas 470 60 589 572 10;
+#X text 27 30 Objects and their ARGUMENTS (... and a little bit of
+math);
+#X obj 32 78 int;
+#X obj 32 109 float;
+#X obj 35 215 int 5;
+#X floatatom 35 259 5 0 0 0 - - -, f 5;
+#X obj 35 182 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X text 172 216 here we set different ARGUMENTS. Bang triggers output.
+;
+#X obj 79 215 float 3.6;
+#X obj 79 182 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X floatatom 35 486 5 0 0 0 - - -, f 5;
+#X floatatom 36 296 5 0 0 0 - - -, f 5;
+#X msg 71 321 2.3;
+#X msg 128 365 3.8;
+#X msg 159 378 -3;
+#X text 110 323 floats get truncated;
+#X floatatom 128 483 5 0 0 0 - - -, f 5;
+#X floatatom 183 404 5 0 0 0 - - -, f 5;
+#X text 234 404 shift + click & drag for decimals!;
+#X text 143 142 by default \, their argument (=value) is 0;
+#X text 141 75 the [int] object can store an integer;
+#X text 142 108 the [float] object can store a decimal floating point
+number;
+#X text 109 294 Number sets int argmuent instantly;
+#X obj 72 78 i;
+#X obj 82 109 f;
+#X obj 35 450 i;
+#X obj 128 447 f;
+#X connect 3 0 4 0;
+#X connect 5 0 3 0;
+#X connect 7 0 4 0;
+#X connect 8 0 7 0;
+#X connect 10 0 24 0;
+#X connect 11 0 24 0;
+#X connect 12 0 24 0;
+#X connect 12 0 25 0;
+#X connect 13 0 24 0;
+#X connect 13 0 25 0;
+#X connect 16 0 25 0;
+#X connect 16 0 24 0;
+#X connect 24 0 9 0;
+#X connect 25 0 15 0;

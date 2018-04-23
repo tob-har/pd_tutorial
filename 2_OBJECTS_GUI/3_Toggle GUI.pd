@@ -1,0 +1,39 @@
+#N canvas 140 29 599 566 10;
+#X text 30 30 GUI - Graphical User Interface;
+#X text 30 63 Many Objects can be replaced by handy GUIs.;
+#X obj 33 95 bang;
+#X text 72 96 =;
+#X obj 93 96 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X text 34 141 Here are some more important GUI Objects \, found in
+the Put Menu:;
+#X obj 38 188 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X text 122 182 TOGGLE behaves like an ON/OFF switch (just click it)
+It sends 0 and 1 messages;
+#X floatatom 38 249 5 0 0 0 - - -, f 5;
+#X obj 40 284 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 81 360 tgl 30 0 empty empty empty 17 7 0 10 -262144 -4160 -1
+0 1;
+#X obj 76 286 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X msg 110 283 1;
+#X msg 134 312 0;
+#X text 189 312 0 mesage is toogle off;
+#X text 187 281 ever non zero number is togge on;
+#X floatatom 81 432 5 0 0 0 - - -, f 5;
+#X obj 59 432 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 119 431 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X text 114 96 =;
+#X obj 133 95 b;
+#X connect 6 0 8 0;
+#X connect 9 0 10 0;
+#X connect 10 0 16 0;
+#X connect 10 0 17 0;
+#X connect 10 0 18 0;
+#X connect 11 0 10 0;
+#X connect 12 0 10 0;
+#X connect 13 0 10 0;

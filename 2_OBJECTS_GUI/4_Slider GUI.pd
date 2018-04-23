@@ -1,0 +1,43 @@
+#N canvas 140 29 599 566 10;
+#X text 30 30 GUI: Slider;
+#X obj 34 70 vsl 15 128 0 127 0 0 empty empty empty 0 -9 0 10 -262144
+-1 -1 0 1;
+#X obj 80 67 hsl 128 15 0 127 0 0 empty empty empty -2 -8 0 10 -262144
+-1 -1 0 1;
+#X floatatom 34 216 5 0 0 0 - - -, f 5;
+#X floatatom 77 93 5 0 0 0 - - -, f 5;
+#X text 253 65 Slider put out numbers. Default: from 0 to 127 (change
+in propertiers!);
+#X obj 56 453 hsl 128 15 0 127 0 0 empty empty empty -2 -8 0 10 -262144
+-1 -1 2000 1;
+#X floatatom 53 482 5 0 0 0 - - -, f 5;
+#X obj 53 511 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X obj 53 259 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X floatatom 78 280 5 0 0 0 - - -, f 5;
+#X msg 101 313 100;
+#X msg 179 408 set 20;
+#X text 91 255 bang triggers output;
+#X text 126 274 number box sets slider value \, when in slider range
+\, triggers slider output on every value;
+#X text 162 312 message sets slider value \, triggers output;
+#X msg 120 338 -55;
+#X msg 155 340 300;
+#X text 204 339 out of range value set slider to min or max;
+#X text 241 405 set + argument message sets slider value \, but does
+not trgger its output. (but a bang afterwards does!);
+#X obj 212 428 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X text 178 386 THIS IS VERY IMPORTANT \; -);
+#X connect 1 0 3 0;
+#X connect 2 0 4 0;
+#X connect 6 0 7 0;
+#X connect 7 0 8 0;
+#X connect 9 0 6 0;
+#X connect 10 0 6 0;
+#X connect 11 0 6 0;
+#X connect 12 0 6 0;
+#X connect 16 0 6 0;
+#X connect 17 0 6 0;
+#X connect 20 0 6 0;

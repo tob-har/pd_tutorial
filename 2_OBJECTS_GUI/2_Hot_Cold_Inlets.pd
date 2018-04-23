@@ -1,0 +1,30 @@
+#N canvas 546 292 602 421 10;
+#X text 40 23 HOT and COLD Inlets;
+#X obj 40 127 float 5.123;
+#X floatatom 40 168 5 0 0 0 - - -, f 5;
+#X obj 40 89 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X text 168 104 The leftmost inlet is the HOT inlet. Recieved messages
+ALSO trigger the objects action.;
+#X text 169 148 Here \, the bang \, outputs the initial argument.;
+#X obj 43 300 float 5.123;
+#X floatatom 43 356 8 0 0 0 - - -, f 8;
+#X obj 43 225 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X msg 126 237 -123.456;
+#X msg 145 258 0;
+#X text 204 238 The rightmost inlet is the COLD inlet. Recieved messages
+change the arguments of th object. The objects action IS NOT triggered.
+;
+#X floatatom 68 247 5 0 0 0 - - -, f 5;
+#X obj 103 334 print;
+#X msg 106 212 300000;
+#X connect 1 0 2 0;
+#X connect 3 0 1 0;
+#X connect 6 0 7 0;
+#X connect 6 0 13 0;
+#X connect 8 0 6 0;
+#X connect 9 0 6 1;
+#X connect 10 0 6 1;
+#X connect 12 0 6 1;
+#X connect 14 0 6 1;
