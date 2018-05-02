@@ -1,0 +1,43 @@
+#N canvas 188 150 593 489 10;
+#N canvas 602 258 450 300 (subpatch) 0;
+#X restore 29 160 pd;
+#X text 26 32 Collecting patches \, putting them together as presets
+\, modifying preexisting patches and using multiple instances of a
+patch is crutial to handle Pd properly. To handle small parts of a
+patch properly and to clean up the canvas \, you can use subpatches.
+Subpatches look like an object on its root-canvas \, and open as an
+own canvas by clicking on it. They are stored with its root Pd patch!!!
+The sub-patcher is therefore also call pd-object:;
+#N canvas 341 292 450 300 subpatcher 0;
+#X obj 35 95 metro 300;
+#X obj 35 123 f;
+#X obj 64 123 + 1;
+#X floatatom 35 150 5 0 0 0 - - -, f 5;
+#X obj 35 70 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1 1
+;
+#X obj 35 44 loadbang;
+#X text 30 23 Here we secretly count numbers in the background:;
+#X connect 0 0 1 0;
+#X connect 1 0 2 0;
+#X connect 1 0 3 0;
+#X connect 2 0 1 1;
+#X connect 4 0 0 0;
+#X connect 5 0 4 0;
+#X restore 29 191 pd subpatcher;
+#X text 121 191 Subpatches can be labelled with an argument.;
+#N canvas 331 438 450 300 counter 0;
+#X obj 46 136 metro 300;
+#X obj 46 164 f;
+#X obj 75 164 + 1;
+#X floatatom 46 191 5 0 0 0 - - -, f 5;
+#X obj 46 111 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
+1;
+#X obj 46 85 loadbang;
+#X text 44 59 And here we hide a counter \, too!;
+#X connect 0 0 1 0;
+#X connect 1 0 2 0;
+#X connect 1 0 3 0;
+#X connect 2 0 1 1;
+#X connect 4 0 0 0;
+#X connect 5 0 4 0;
+#X restore 29 223 pd counter;

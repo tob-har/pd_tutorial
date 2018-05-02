@@ -1,0 +1,66 @@
+#N canvas 195 79 853 524 10;
+#X obj 55 134 metro 500;
+#X msg 55 58 1;
+#X msg 65 77 0;
+#X msg 99 57 bang;
+#X msg 110 77 stop;
+#X msg 105 316 60000;
+#X obj 55 160 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X text 37 32 1) Lets remember the metro object:;
+#X text 43 213 2) Now we want to create a BPM metro;
+#X obj 86 418 metro;
+#X floatatom 159 304 5 0 0 0 - - -, f 5;
+#X obj 86 271 t b b b;
+#X obj 86 247 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X floatatom 189 373 5 0 0 0 - - -, f 5;
+#X obj 105 385 i;
+#X floatatom 190 401 5 0 0 0 - - -, f 5;
+#X msg 55 246 0;
+#X obj 86 444 bng 15 100 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X msg 159 268 60;
+#X obj 159 246 loadbang;
+#X text 233 245 Loadbang gives an initial BPM value;
+#X text 237 400 "int" or "i" rounds a float to an integer;
+#X obj 159 324 t b f;
+#X obj 105 357 /;
+#X msg 607 296 60000 \$1;
+#X floatatom 607 265 5 0 0 0 - - -, f 5;
+#X floatatom 607 338 5 0 0 0 - - -, f 5;
+#X obj 580 359 metro;
+#X obj 580 265 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 580 384 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X text 576 238 The same as a nice solution:;
+#X text 642 265 BPM;
+#X obj 607 317 div;
+#X connect 0 0 6 0;
+#X connect 1 0 0 0;
+#X connect 2 0 0 0;
+#X connect 3 0 0 0;
+#X connect 4 0 0 0;
+#X connect 5 0 23 0;
+#X connect 9 0 17 0;
+#X connect 10 0 22 0;
+#X connect 11 0 9 0;
+#X connect 11 1 5 0;
+#X connect 11 2 10 0;
+#X connect 12 0 11 0;
+#X connect 14 0 15 0;
+#X connect 14 0 9 1;
+#X connect 16 0 9 0;
+#X connect 18 0 10 0;
+#X connect 19 0 18 0;
+#X connect 22 0 23 0;
+#X connect 22 1 23 1;
+#X connect 23 0 13 0;
+#X connect 23 0 14 0;
+#X connect 24 0 32 0;
+#X connect 25 0 24 0;
+#X connect 26 0 27 1;
+#X connect 27 0 29 0;
+#X connect 28 0 27 0;
+#X connect 32 0 26 0;

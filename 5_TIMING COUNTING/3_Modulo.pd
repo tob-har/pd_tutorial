@@ -1,0 +1,44 @@
+#N canvas 608 361 593 489 10;
+#X obj 94 313 + 1;
+#X floatatom 63 337 5 0 0 0 - - -, f 5;
+#X msg 137 276 0;
+#X obj 63 380 % 8;
+#X floatatom 63 408 5 0 0 0 - - -, f 5;
+#X text 30 46 Lets add a nice festure to the BPM metronome: some kind
+of cylcing counter. For this \, we will use the "modulus" object:;
+#X text 30 86 THIS OBJECT HAS NOTHING TO DO WITH PERCENTAGE!!!;
+#X msg 111 358 3;
+#X text 151 383 In this case \, "modulus" actually will cycle for the
+value given at its argument. The argument can be changed by the sending
+a number to its cold inlet.;
+#X obj 23 380 mod 8;
+#X floatatom 23 408 5 0 0 0 - - -, f 5;
+#X msg 90 206 60000 \$1;
+#X floatatom 90 175 5 0 0 0 - - -, f 5;
+#X obj 90 227 div;
+#X floatatom 90 248 5 0 0 0 - - -, f 5;
+#X obj 63 269 metro;
+#X obj 63 175 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
+1;
+#X text 125 175 BPM;
+#X obj 63 313 f;
+#X msg 90 143 120;
+#X obj 90 122 loadbang;
+#X connect 0 0 18 1;
+#X connect 1 0 3 0;
+#X connect 1 0 9 0;
+#X connect 2 0 18 1;
+#X connect 3 0 4 0;
+#X connect 7 0 3 1;
+#X connect 7 0 9 1;
+#X connect 9 0 10 0;
+#X connect 11 0 13 0;
+#X connect 12 0 11 0;
+#X connect 13 0 14 0;
+#X connect 14 0 15 1;
+#X connect 15 0 18 0;
+#X connect 16 0 15 0;
+#X connect 18 0 0 0;
+#X connect 18 0 1 0;
+#X connect 19 0 12 0;
+#X connect 20 0 19 0;

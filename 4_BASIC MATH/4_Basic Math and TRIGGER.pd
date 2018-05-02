@@ -1,0 +1,64 @@
+#N canvas 400 41 684 691 10;
+#X text 32 30 So lets find a proper routine to deal with math in Pd:
+The TRIGGER Obejct:;
+#X obj 37 86 trigger;
+#X obj 124 86 t;
+#X text 96 84 =;
+#X obj 37 186 trigger bang;
+#X obj 37 215 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 37 162 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X text 37 126 Trigger basically outputs bangs in RIGHT to LEFT order:
+;
+#X text 154 183 This will output one bang when triggerd... an yes...
+trigger needs to be triggered...;
+#X obj 37 244 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X obj 37 271 trigger bang bang bang;
+#X obj 37 301 bng 15 500 50 0 empty empty empty 17 7 0 10 -262144 -258113
+-1;
+#X obj 101 301 bng 15 300 50 0 empty empty empty 17 7 0 10 -262144
+-260097 -1;
+#X obj 166 301 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-4034 -1;
+#X text 224 268 For every bang \, trigger generates a corresponding
+outlet. (Remeber the propertiers? here used on the bang GUI!);
+#X msg 37 325 1;
+#X msg 101 324 2;
+#X msg 166 324 3;
+#X obj 37 366 print;
+#X msg 40 541 2;
+#X obj 40 514 t b b;
+#X msg 72 541 3;
+#X floatatom 40 597 5 0 0 0 - - -;
+#X obj 40 569 +;
+#X obj 40 485 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X obj 230 513 trigger bang bang;
+#X text 103 513 = abbreviation for;
+#X text 41 432 comment;
+#X text 39 421 Combining trigger with the equation gives you full controll
+over the processing order... and you never have to worry about the
+patching order any more!!!;
+#X text 136 541 Because trigger works RIGHT to LEFT \, the first bang
+sets the argument of the math object \, and the second bang fires the
+equation by sending the number into the hot inlet.;
+#X connect 4 0 5 0;
+#X connect 6 0 4 0;
+#X connect 9 0 10 0;
+#X connect 10 0 11 0;
+#X connect 10 1 12 0;
+#X connect 10 2 13 0;
+#X connect 11 0 15 0;
+#X connect 12 0 16 0;
+#X connect 13 0 17 0;
+#X connect 15 0 18 0;
+#X connect 16 0 18 0;
+#X connect 17 0 18 0;
+#X connect 19 0 23 0;
+#X connect 20 0 19 0;
+#X connect 20 1 21 0;
+#X connect 21 0 23 1;
+#X connect 23 0 22 0;
+#X connect 24 0 20 0;

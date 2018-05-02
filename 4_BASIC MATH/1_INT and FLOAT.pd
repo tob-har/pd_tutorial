@@ -1,0 +1,30 @@
+#N canvas 483 144 548 467 10;
+#X obj 41 72 float;
+#X obj 88 72 f;
+#X msg 120 72 1.234;
+#X obj 44 153 int;
+#X floatatom 47 278 5 0 0 0 - - -;
+#X floatatom 47 330 5 0 0 0 - - -;
+#X floatatom 105 330 5 0 0 0 - - -;
+#X obj 105 306 int;
+#X msg 44 219 1;
+#X msg 77 219 -3;
+#X msg 112 219 1.234;
+#X msg 156 219 1.8;
+#X msg 189 219 -1.234;
+#X msg 239 219 -1.8;
+#X text 38 31 Pd only works with one kind of numbers: "floating point
+number" or [float] or [f];
+#X text 167 331 Keep in mind how [int] rounds the floats!;
+#X obj 70 153 i;
+#X text 41 111 To convert a float to an integer number \, there is
+the [int] or [i] oject:;
+#X connect 4 0 5 0;
+#X connect 4 0 7 0;
+#X connect 7 0 6 0;
+#X connect 8 0 4 0;
+#X connect 9 0 4 0;
+#X connect 10 0 4 0;
+#X connect 11 0 4 0;
+#X connect 12 0 4 0;
+#X connect 13 0 4 0;

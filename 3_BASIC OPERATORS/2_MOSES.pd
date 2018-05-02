@@ -1,0 +1,37 @@
+#N canvas 465 80 586 584 10;
+#X text 29 106 1) Hello;
+#X obj 47 234 bng 30 250 50 0 empty empty empty 17 7 0 10 -262144 -258113
+-1;
+#X obj 89 105 moses;
+#X obj 92 234 bng 30 250 50 0 empty empty empty 17 7 0 10 -262144 -4034
+-1;
+#X text 27 23 Now we focus on another crutial condition test: Test
+conditon x \, if true do action a \, else do action b. Or bettern knonw
+as if else condition.;
+#X floatatom 47 148 5 0 0 0 - - -, f 5;
+#X floatatom 36 269 5 0 0 0 - - -, f 5;
+#X floatatom 81 270 5 0 0 0 - - -, f 5;
+#X text 149 279 It will also send out the incoming number to the left
+\, as long as it is less then its argument and send it out to the right
+as soon it is equla or greater.;
+#X msg 129 148 12;
+#X text 152 191 Moses will bang out left \, if the input is less then
+its argument \, and bang out right \, if the input is equal or greater
+then its argument. Right inlet will change the initial argument of
+moses.;
+#X floatatom 47 381 5 0 0 0 - - -, f 5;
+#X floatatom 47 427 5 0 0 0 - - -, f 5;
+#X obj 47 404 moses 1.5;
+#X floatatom 98 427 5 0 0 0 - - -, f 5;
+#X text 155 400 Moses can handle floats and integers. Try Shift-scrolling
+with the number box.;
+#X obj 47 195 moses 42;
+#X connect 5 0 16 0;
+#X connect 9 0 16 1;
+#X connect 11 0 13 0;
+#X connect 13 0 12 0;
+#X connect 13 1 14 0;
+#X connect 16 0 1 0;
+#X connect 16 0 6 0;
+#X connect 16 1 3 0;
+#X connect 16 1 7 0;

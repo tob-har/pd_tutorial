@@ -1,0 +1,33 @@
+#N canvas 601 272 593 402 10;
+#X msg 67 58 1 1000;
+#X msg 77 79 0 1000;
+#X msg 89 100 0;
+#X text 125 58 Fade like line;
+#X text 123 101 Jump to value;
+#X msg 138 168 1 1000 \, 0 0 2000 \, 0.5 500 2500 \, 0 500 3000;
+#X obj 115 311 hsl 128 15 0 1 0 0 empty empty empty -2 -8 0 10 -262144
+-1 -1 0 1;
+#X obj 67 230 vline~;
+#X obj 67 268 snapshot~;
+#X obj 144 217 metro 5;
+#X obj 144 238 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 144 197 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X floatatom 67 311 5 0 0 0 - - -, f 5;
+#X msg 361 62 \; pd dsp \$1;
+#X obj 361 38 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X text 135 123 Create env: to 1 in 1000ms to 0 in 0ms after 2000ms
+to 0.5 in 500 after 2500 \, to 0 in 500 after 3000;
+#X connect 0 0 7 0;
+#X connect 1 0 7 0;
+#X connect 2 0 7 0;
+#X connect 5 0 7 0;
+#X connect 7 0 8 0;
+#X connect 8 0 6 0;
+#X connect 8 0 12 0;
+#X connect 9 0 10 0;
+#X connect 10 0 8 0;
+#X connect 11 0 9 0;
+#X connect 14 0 13 0;

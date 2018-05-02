@@ -1,0 +1,10 @@
+#N canvas 203 94 509 367 10;
+#X obj 244 303 tabosc4~ table1;
+#X obj 240 152 table table1;
+#X msg 239 114 \; table1 cosinesum 512 0 1;
+#X msg 333 248 set table1;
+#X obj 229 252 sig~ 100;
+#X floatatom 212 215 5 0 0 0 - - -, f 5;
+#X connect 3 0 0 0;
+#X connect 4 0 0 0;
+#X connect 5 0 4 0;

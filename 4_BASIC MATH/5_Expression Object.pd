@@ -1,0 +1,87 @@
+#N canvas 337 23 797 755 10;
+#X text 24 94 This will calculate whole equations according to its
+syntax. Because of this you can avoid messing up the patching order!
+;
+#X obj 24 69 expr;
+#X text 26 159 1) Simple expressions with fixed values;
+#X floatatom 27 251 5 0 0 0 - - -, f 5;
+#X obj 27 185 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X obj 91 225 expr 3*5;
+#X floatatom 91 250 5 0 0 0 - - -, f 5;
+#X obj 27 225 expr 2+3;
+#X obj 154 225 expr 3-5.123;
+#X floatatom 154 250 5 0 0 0 - - -, f 5;
+#X obj 277 224 expr 5/0;
+#X floatatom 277 250 5 0 0 0 - - -, f 5;
+#X text 340 222 (wrong math gives ERROR in terminal);
+#X text 25 318 2) Expressions with one variable;
+#X text 27 483 3) Expressions with two and more variables;
+#X obj 47 424 expr $f1+3;
+#X floatatom 89 397 5 0 0 0 - - -, f 5;
+#X floatatom 47 453 5 0 0 0 - - -, f 5;
+#X msg 47 397 2;
+#X text 44 339 When using the expr Object \, variable arguments can
+be read into the expression using the $ sign. But it needs a special
+syntax: $f1 \, $f2 \, $f3 \, etc.;
+#X obj 49 546 expr $f1+$f2;
+#X text 144 417 $f1 is received on hot inlet. For every variable that
+follows \, expr generates a corresponding inlet.;
+#X msg 49 522 2;
+#X msg 118 522 3;
+#X floatatom 49 572 5 0 0 0 - - -, f 5;
+#X obj 49 702 expr $f1+$f2;
+#X msg 49 678 2;
+#X msg 118 678 3;
+#X floatatom 49 728 5 0 0 0 - - -, f 5;
+#X obj 49 653 t b b;
+#X obj 49 633 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X text 46 603 Solutions:;
+#X obj 189 702 expr $f1+$f2;
+#X msg 189 678 2;
+#X msg 189 643 3;
+#X floatatom 189 728 5 0 0 0 - - -, f 5;
+#X obj 319 702 expr $f1+$f2;
+#X floatatom 319 728 5 0 0 0 - - -, f 5;
+#X floatatom 319 652 5 0 0 0 - - -, f 5;
+#X floatatom 388 651 5 0 0 0 - - -, f 5;
+#X obj 373 678 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 514 418 expr $f1;
+#X obj 514 439 expr $i1;
+#X text 575 417 float variable;
+#X text 574 439 integer variable;
+#X text 22 30 There is another handy way to deal with expressionts
+and equations by using the [expression] object:;
+#X text 170 548 ... and now we get the procssing-order problem again!
+;
+#X connect 4 0 5 0;
+#X connect 4 0 7 0;
+#X connect 4 0 8 0;
+#X connect 4 0 10 0;
+#X connect 5 0 6 0;
+#X connect 7 0 3 0;
+#X connect 8 0 9 0;
+#X connect 10 0 11 0;
+#X connect 15 0 17 0;
+#X connect 16 0 15 0;
+#X connect 18 0 15 0;
+#X connect 20 0 24 0;
+#X connect 22 0 20 0;
+#X connect 23 0 20 1;
+#X connect 25 0 28 0;
+#X connect 26 0 25 0;
+#X connect 27 0 25 1;
+#X connect 29 0 26 0;
+#X connect 29 1 27 0;
+#X connect 30 0 29 0;
+#X connect 32 0 35 0;
+#X connect 33 0 32 0;
+#X connect 34 0 32 1;
+#X connect 34 0 33 0;
+#X connect 36 0 37 0;
+#X connect 38 0 36 0;
+#X connect 39 0 40 0;
+#X connect 39 0 36 1;
+#X connect 40 0 38 0;

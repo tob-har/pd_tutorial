@@ -1,0 +1,38 @@
+#N canvas 510 329 545 299 10;
+#X text 39 65 The number of elements in the list must match the number
+of inlets and their types must be compatible.;
+#X text 38 31 An object with 2 or more message inlets will distribute
+a list of parameters to all inlets using only the first inlet.;
+#X msg 48 128 5 3;
+#X obj 48 150 -;
+#X floatatom 48 172 5 0 0 0 - - -, f 5;
+#X msg 120 174 5;
+#X msg 160 174 3;
+#X obj 120 208 -;
+#X obj 120 148 t b b;
+#X floatatom 120 230 5 0 0 0 - - -, f 5;
+#X obj 120 127 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X msg 278 128 5 3;
+#X floatatom 278 172 5 0 0 0 - - -, f 5;
+#X obj 278 150 *;
+#X msg 328 128 5 3;
+#X floatatom 328 172 5 0 0 0 - - -, f 5;
+#X obj 328 150 /;
+#X floatatom 228 172 5 0 0 0 - - -, f 5;
+#X obj 228 150 +;
+#X msg 228 128 5 3;
+#X connect 2 0 3 0;
+#X connect 3 0 4 0;
+#X connect 5 0 7 0;
+#X connect 6 0 7 1;
+#X connect 7 0 9 0;
+#X connect 8 0 5 0;
+#X connect 8 1 6 0;
+#X connect 10 0 8 0;
+#X connect 11 0 13 0;
+#X connect 13 0 12 0;
+#X connect 14 0 16 0;
+#X connect 16 0 15 0;
+#X connect 18 0 17 0;
+#X connect 19 0 18 0;

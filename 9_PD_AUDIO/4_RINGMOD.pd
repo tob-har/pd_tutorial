@@ -1,0 +1,14 @@
+#N canvas 642 108 573 566 10;
+#X obj 39 63 osc~ 400;
+#X obj 110 63 osc~ 3;
+#X obj 39 109 *~;
+#X obj 39 161 *~ 0.1;
+#X obj 39 188 dac~;
+#X floatatom 110 38 5 0 0 0 - - -, f 5;
+#X text 35 13 Multiplying two Audio-Signals is called Ringmodulation
+;
+#X connect 0 0 2 0;
+#X connect 1 0 2 1;
+#X connect 2 0 3 0;
+#X connect 3 0 4 0;
+#X connect 5 0 1 0;

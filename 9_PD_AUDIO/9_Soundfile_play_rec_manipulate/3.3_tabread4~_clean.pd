@@ -1,0 +1,134 @@
+#N canvas 718 137 721 374 10;
+#X obj 463 56 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
+1;
+#X msg 463 76 \; pd dsp \$1;
+#X obj 120 58 bng 15 250 50 0 s_openfile empty Open_Soundfile 17 7
+0 10 -228856 -1 -1;
+#X obj 122 182 hsl 195 20 0 1 0 0 s_playbackposition r_playbackposition
+Playback_Position_Monitor -2 -8 0 10 -204786 -1 -1 0 1;
+#N canvas 4 23 276 464 soundfilearrays 0;
+#N canvas 4 23 450 278 (subpatch) 0;
+#X array channel1 273382 float 2;
+#X coords 0 1 273382 -1 200 140 1;
+#X restore 16 32 graph;
+#N canvas 4 23 450 278 (subpatch) 0;
+#X array channel2 273382 float 2;
+#X coords 0 1 273382 -1 200 140 1;
+#X restore 16 197 graph;
+#X obj 19 349 hsl 195 20 0 1 0 0 empty r_playbackposition empty -2
+-8 0 10 -262144 -1 -1 0 1;
+#X restore 463 110 pd soundfilearrays;
+#N canvas 166 92 584 718 soundfileplayer 0;
+#X obj 120 44 openpanel;
+#X msg 120 65 read -resize \$1 channel1 channel2;
+#X obj 120 23 r s_openfile;
+#X obj 120 87 soundfiler;
+#X floatatom 154 110 12 0 0 0 - - -, f 12;
+#X obj 120 157 expr 44100 / $f1;
+#X obj 120 447 phasor~;
+#X floatatom 154 182 12 0 0 0 - - -, f 12;
+#X obj 120 503 *~;
+#X obj 120 566 tabread4~ channel1;
+#X obj 173 587 tabread4~ channel2;
+#X obj 154 131 s totalsamples;
+#X obj 138 476 r totalsamples;
+#N canvas 4 23 450 300 playbackposition 0;
+#X obj 96 83 snapshot~;
+#X floatatom 96 105 12 0 0 0 - - -, f 12;
+#X obj 96 151 /;
+#X obj 96 151 /;
+#X floatatom 96 174 5 0 0 1 Playbackposition_Value - r_playbackposition
+, f 5;
+#X obj 114 127 r totalsamples;
+#X obj 96 18 loadbang;
+#X msg 96 40 1;
+#X obj 96 62 metro 30;
+#X obj 43 18 inlet~;
+#X connect 0 0 1 0;
+#X connect 1 0 2 0;
+#X connect 2 0 4 0;
+#X connect 5 0 2 1;
+#X connect 6 0 7 0;
+#X connect 7 0 8 0;
+#X connect 8 0 0 0;
+#X connect 9 0 0 0;
+#X restore 219 532 pd playbackposition;
+#X floatatom 154 340 5 0 0 0 - - -, f 5;
+#X msg 154 250 0.161313;
+#X obj 154 201 prepend set;
+#X msg 166 414 0;
+#X msg 218 419 0;
+#X obj 166 387 t b b;
+#X obj 173 317 r s_play;
+#X obj 218 396 r s_pause;
+#X obj 166 362 r s_stop;
+#X obj 165 272 s r_playbackspeed;
+#X obj 165 293 r s_playbackspeed;
+#X floatatom 311 421 5 0 0 0 - - -, f 5;
+#X obj 311 398 r s_playbackphase;
+#X obj 204 449 s r_playbackphase;
+#X obj 173 226 r s_playatoriginalspeed;
+#X obj 120 624 s~ ch1;
+#X obj 173 624 s~ ch2;
+#X connect 0 0 1 0;
+#X connect 1 0 3 0;
+#X connect 2 0 0 0;
+#X connect 3 0 4 0;
+#X connect 3 0 5 0;
+#X connect 4 0 11 0;
+#X connect 5 0 6 0;
+#X connect 5 0 7 0;
+#X connect 6 0 8 0;
+#X connect 7 0 16 0;
+#X connect 8 0 9 0;
+#X connect 8 0 10 0;
+#X connect 8 0 13 0;
+#X connect 9 0 29 0;
+#X connect 10 0 30 0;
+#X connect 12 0 8 1;
+#X connect 14 0 6 0;
+#X connect 15 0 23 0;
+#X connect 15 0 14 0;
+#X connect 16 0 15 0;
+#X connect 17 0 6 1;
+#X connect 17 0 27 0;
+#X connect 18 0 6 0;
+#X connect 19 0 17 0;
+#X connect 19 1 18 0;
+#X connect 20 0 14 0;
+#X connect 21 0 18 0;
+#X connect 22 0 19 0;
+#X connect 24 0 14 0;
+#X connect 25 0 6 1;
+#X connect 26 0 25 0;
+#X connect 28 0 15 0;
+#X restore 463 130 pd soundfileplayer;
+#X obj 120 103 bng 15 250 50 0 s_play empty Play_Continue 17 7 0 10
+-4034 -1 -1;
+#X obj 120 120 bng 15 250 50 0 s_pause empty Pause 17 7 0 10 -257985
+-1 -1;
+#X obj 120 137 bng 15 250 50 0 s_stop empty Stop 17 7 0 10 -258113
+-1 -1;
+#X obj 122 229 hsl 128 20 -1 1 0 0 s_playbackspeed r_playbackspeed
+Playback_Speed_and_Direction -2 -8 0 10 -232576 -1 -1 7374 1;
+#X obj 122 274 hsl 128 20 0 1 0 0 s_playbackphase r_playbackphase Playback_Phase
+-2 -8 0 10 -203904 -1 -1 0 1;
+#X obj 303 231 vsl 20 60 0 1 0 0 s_volume r_volume Volume 0 -9 0 10
+-261682 -1 -1 0 1;
+#X obj 120 86 bng 15 250 50 0 s_playatoriginalspeed r_playatoriginalspeed
+Play_Original_File 17 7 0 10 -204786 -1 -1;
+#N canvas 4 23 328 206 audio_out 0;
+#X obj 50 127 dac~ 1 2;
+#X obj 50 102 *~;
+#X obj 103 102 *~;
+#X obj 154 62 r s_volume;
+#X obj 50 42 r~ ch1;
+#X obj 103 42 r~ ch2;
+#X connect 1 0 0 0;
+#X connect 2 0 0 1;
+#X connect 3 0 2 1;
+#X connect 3 0 1 1;
+#X connect 4 0 1 0;
+#X connect 5 0 2 0;
+#X restore 463 152 pd audio_out;
+#X connect 0 0 1 0;

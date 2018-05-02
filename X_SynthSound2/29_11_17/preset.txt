@@ -1,0 +1,15 @@
+0 more5/tag 99;
+0 more4/tag 15;
+0 more3 172;
+0 more2 18;
+0 more1 75;
+1 more5/tag 1;
+1 more4/tag 75;
+1 more3 13;
+1 more2 255;
+1 more1 11;
+2 more5/tag 188;
+2 more4/tag -135;
+2 more3 205;
+2 more2 172;
+2 more1 88;

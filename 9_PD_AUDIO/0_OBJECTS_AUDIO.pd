@@ -1,0 +1,6 @@
+#N canvas 199 110 644 750 10;
+#X obj 15 22 osc~;
+#X obj 15 44 dac~;
+#X obj 58 22 print~;
+#X obj 15 88 tabwrite~;
+#X obj 15 66 line~;

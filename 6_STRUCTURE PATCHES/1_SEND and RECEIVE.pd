@@ -1,0 +1,43 @@
+#N canvas 616 27 594 670 10;
+#X text 17 16 You can send and recieve messages without patch-chords
+by using the send and recieve objects:;
+#X obj 20 51 send;
+#X obj 20 71 receive;
+#X obj 50 51 s;
+#X obj 70 71 r;
+#X obj 20 150 metro;
+#X obj 20 172 bng 15 150 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X obj 20 118 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X msg 51 118 200;
+#X msg 82 118 500;
+#X obj 20 366 metro;
+#X obj 20 388 bng 15 150 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X obj 20 265 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 47 334 r tempo;
+#X msg 47 265 200;
+#X msg 78 265 500;
+#X obj 47 300 s tempo;
+#X obj 122 299 cnv 15 100 60 empty empty empty 20 12 0 14 -233017 -66577
+0;
+#X obj 123 300 r tempo;
+#X floatatom 123 334 5 0 0 0 - - -, f 5;
+#X text 17 217 "Send" and "receive" \, or "s" and "r" need an argument.
+They also can be used several times.;
+#X obj 247 299 hsl 128 15 30 350 0 0 tempo empty empty -2 -8 0 10 -262144
+-1 -1 0 1;
+#X text 243 317 Send and receive arguments can be set in GUI Objects
+proertiers!;
+#X connect 5 0 6 0;
+#X connect 7 0 5 0;
+#X connect 8 0 5 1;
+#X connect 9 0 5 1;
+#X connect 10 0 11 0;
+#X connect 12 0 10 0;
+#X connect 13 0 10 1;
+#X connect 14 0 16 0;
+#X connect 15 0 16 0;
+#X connect 18 0 19 0;

@@ -1,0 +1,56 @@
+#N canvas 616 74 587 692 10;
+#X obj 57 176 spigot;
+#X floatatom 57 202 5 0 0 0 - - -;
+#X msg 57 130 42;
+#X msg 115 129 1;
+#X msg 147 129 0;
+#X obj 95 85 spigot;
+#X text 29 86 1) Hello;
+#X obj 35 204 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X obj 57 320 == 42;
+#X floatatom 57 295 5 0 0 0 - - -;
+#X floatatom 57 348 5 0 0 0 - - -;
+#X obj 57 379 spigot;
+#X obj 57 407 bng 30 400 50 0 empty empty empty 17 7 0 10 -262144 -258113
+-1;
+#X obj 35 349 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X text 128 415 This is a basic routine to trigger an action if a condition
+is true \, else do nothing.;
+#X text 32 256 2) Check condition: check if a number = 42;
+#X obj 57 598 spigot;
+#X obj 57 619 print;
+#X msg 90 559 1;
+#X msg 119 559 0;
+#X floatatom 151 559 1 0 0 0 - - -;
+#X msg 57 536 open the door;
+#X msg 35 514 bang;
+#X text 32 480 3) Spigot works as a gate for every message;
+#X text 172 559 (A number object with its width set to 1 in propertiers
+\, works as a clickable 0 and 1 switch.);
+#X text 25 31 For handling messages \, a gate is very handy:;
+#X text 190 126 [Spigot] let numbers flow thru \, if it is open. Else
+it blocks every incoming number. Right inlet is like a gate: if it
+recieves 1 spigots left inlet is open if it recieves 0 spigots left
+inlet is closed By default \, spigot is closed.;
+#X text 127 315 The [equal object] outputs 1 if the input is equal
+to its argument. Else it outputs 0 So every arguement sent in \, will
+output a bang!!!;
+#X connect 0 0 1 0;
+#X connect 0 0 7 0;
+#X connect 2 0 0 0;
+#X connect 3 0 0 1;
+#X connect 4 0 0 1;
+#X connect 8 0 10 0;
+#X connect 8 0 13 0;
+#X connect 9 0 8 0;
+#X connect 10 0 11 0;
+#X connect 10 0 11 1;
+#X connect 11 0 12 0;
+#X connect 16 0 17 0;
+#X connect 18 0 16 1;
+#X connect 19 0 16 1;
+#X connect 20 0 16 1;
+#X connect 21 0 16 0;
+#X connect 22 0 16 0;

@@ -1,0 +1,72 @@
+#N canvas 556 37 594 670 10;
+#X obj 25 193 select 5;
+#X obj 25 226 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X obj 70 226 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X floatatom 95 225 5 0 0 0 - - -;
+#X floatatom 25 167 5 0 0 0 - - -;
+#X obj 155 226 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 200 226 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 155 193 select hamster;
+#X symbolatom 236 224 10 0 0 0 - - -;
+#X msg 227 126 symbol cat;
+#X msg 299 126 symbol hamster;
+#X msg 156 126 symbol dog;
+#X text 21 23 If you need to select from a list \, use the select object.
+;
+#X msg 70 167 8;
+#X msg 236 169 symbol dog;
+#X text 21 52 1) With one argument \, select can work as a trigger.
+It sends out a bang \, when the incoming float or symbl matches its
+argument. The argument can be changed via the cold inlet.;
+#X text 27 271 2) When set up with several arguments \, select creates
+a bang on every correspondend outlet and outputs every other value
+at its rightmost outlet:;
+#X obj 27 362 sel 1 2 3 4;
+#X obj 27 399 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X obj 47 399 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X obj 67 399 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X obj 87 399 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X floatatom 110 399 5 0 0 0 - - -;
+#X floatatom 27 336 5 0 0 0 - - -;
+#X obj 202 390 bng 15 250 50 0 empty empty empty 0 -6 0 10 -262144
+-1 -1;
+#X obj 202 341 tgl 15 0 empty empty empty 0 -6 0 10 -262144 -1 -1 0
+1;
+#X obj 221 390 bng 15 250 50 0 empty empty empty 0 -6 0 10 -262144
+-1 -1;
+#X obj 202 362 sel 0 1;
+#X text 27 456 3) Select Modes: float and symbol If the first argument
+is a float \, select works in float mode and will distribute according
+to the floats in its arguments. If the first argument is a symbol (a
+text string) \, slect will handle every atom as a symbol. So string
+needs teh syntax "symbol string" and even flaots need "symbol 300"
+because they will be read as a symbol string!;
+#X connect 0 0 1 0;
+#X connect 0 1 2 0;
+#X connect 0 1 3 0;
+#X connect 4 0 0 0;
+#X connect 7 0 5 0;
+#X connect 7 1 6 0;
+#X connect 7 1 8 0;
+#X connect 9 0 7 0;
+#X connect 10 0 7 0;
+#X connect 11 0 7 0;
+#X connect 13 0 0 1;
+#X connect 14 0 7 1;
+#X connect 17 0 18 0;
+#X connect 17 1 19 0;
+#X connect 17 2 20 0;
+#X connect 17 3 21 0;
+#X connect 17 4 22 0;
+#X connect 23 0 17 0;
+#X connect 25 0 27 0;
+#X connect 27 0 24 0;
+#X connect 27 1 26 0;

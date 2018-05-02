@@ -1,0 +1,72 @@
+#N canvas 337 23 825 644 10;
+#X obj 35 43 expr;
+#X text 71 43 is very handy to perform more complex math.;
+#X text 53 178 Lets calculate the square root of the equation: a^2
++ b^2;
+#X obj 53 289 pow 2;
+#X obj 103 287 pow 2;
+#X obj 53 318 +;
+#X floatatom 53 348 5 0 0 0 - - -, f 5;
+#X obj 53 375 sqrt;
+#X floatatom 53 403 5 0 0 0 - - -, f 5;
+#X obj 53 230 t b b;
+#X obj 53 209 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X text 175 401 ... and get the final result.;
+#X obj 397 287 expr sqrt(pow($f1 \, 2) + pow($f2 \, 2));
+#X msg 447 258 3;
+#X obj 397 230 t b b;
+#X obj 397 209 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X floatatom 397 403 5 0 0 0 - - -, f 5;
+#X msg 53 258 4;
+#X msg 103 258 3;
+#X msg 397 258 4;
+#X text 35 88 1) Equation syntax within the expression object;
+#X text 54 120 The correct syntax for the expr object is more or less
+the same then it is used in c language. It is therefore also very similar
+to the syntax used in Arduino or LaTex etc.;
+#X text 172 256 lets use a=4 and b=3;
+#X text 172 287 here we get 4exp2 and 3exp2;
+#X text 171 315 then add the results;
+#X text 172 343 show the result;
+#X text 173 369 calculate the square root;
+#X msg 147 539 2;
+#X msg 187 539 3;
+#X msg 227 539 4;
+#X obj 147 511 t b b b;
+#X obj 147 490 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 55 584 expr $f2*($f1 + $f3);
+#X obj 221 584 expr ($f3 * $f3) - ($f3 * $f1);
+#X floatatom 55 614 5 0 0 0 - - -, f 5;
+#X floatatom 221 614 5 0 0 0 - - -, f 5;
+#X text 33 455 2) Here are two more examples for syntax;
+#X connect 3 0 5 0;
+#X connect 4 0 5 1;
+#X connect 5 0 6 0;
+#X connect 6 0 7 0;
+#X connect 7 0 8 0;
+#X connect 9 0 17 0;
+#X connect 9 1 18 0;
+#X connect 10 0 9 0;
+#X connect 12 0 16 0;
+#X connect 13 0 12 1;
+#X connect 14 0 19 0;
+#X connect 14 1 13 0;
+#X connect 15 0 14 0;
+#X connect 17 0 3 0;
+#X connect 18 0 4 0;
+#X connect 19 0 12 0;
+#X connect 27 0 32 0;
+#X connect 27 0 33 0;
+#X connect 28 0 32 1;
+#X connect 28 0 33 1;
+#X connect 29 0 32 2;
+#X connect 29 0 33 2;
+#X connect 30 0 27 0;
+#X connect 30 1 28 0;
+#X connect 30 2 29 0;
+#X connect 31 0 30 0;
+#X connect 32 0 34 0;
+#X connect 33 0 35 0;

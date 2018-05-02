@@ -1,0 +1,39 @@
+#N canvas 531 44 593 489 10;
+#X text 41 60 To send messages to a subpatcher \, inlets and outlets
+are used. Every inlet and outlet creats a corresonding inlet and outlet
+to the object symbol on the main canvas:;
+#N canvas 748 245 450 300 inandnout 0;
+#X obj 29 42 inlet;
+#X obj 29 225 outlet;
+#X obj 124 225 outlet;
+#X obj 194 225 outlet;
+#X obj 194 203 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 194 180 metro 333;
+#X obj 194 158 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X symbolatom 29 76 10 0 0 0 - - -, f 10;
+#X msg 29 174 symbol world;
+#X floatatom 124 76 5 0 0 0 - - -, f 5;
+#X obj 124 117 + 1;
+#X connect 0 0 7 0;
+#X connect 0 0 9 0;
+#X connect 4 0 3 0;
+#X connect 5 0 4 0;
+#X connect 6 0 5 0;
+#X connect 7 0 8 0;
+#X connect 8 0 1 0;
+#X connect 9 0 10 0;
+#X connect 10 0 2 0;
+#X restore 47 210 pd inandnout;
+#X obj 116 238 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X msg 47 147 symbol hello;
+#X symbolatom 47 275 10 0 0 0 - - -, f 10;
+#X floatatom 68 183 5 0 0 0 - - -, f 5;
+#X floatatom 68 240 5 0 0 0 - - -, f 5;
+#X connect 1 0 4 0;
+#X connect 1 1 6 0;
+#X connect 1 2 2 0;
+#X connect 3 0 1 0;
+#X connect 5 0 1 0;

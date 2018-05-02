@@ -1,0 +1,77 @@
+#N canvas 462 28 818 746 10;
+#X obj 32 37 expr;
+#X text 65 38 can perform conditional logic;
+#X obj 35 112 expr if(x \, y \, z);
+#X text 31 77 1) The basic conditional logic syntax;
+#X text 168 112 This means: if x \, then output y \, else output z
+x is the condition to be tested. Every position can hold floats \,
+variables or a complete equation.;
+#X obj 44 193 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X msg 44 248 4;
+#X msg 84 248 2;
+#X obj 74 304 expr if($f1 > $f2 \, 1 \, 0);
+#X obj 44 218 t b b;
+#X floatatom 74 335 5 0 0 0 - - -;
+#X obj 214 193 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 214 218 t b b;
+#X msg 214 248 2;
+#X msg 254 248 4;
+#X text 321 306 This means: if $f1 is greater then $f2 \, then output
+1 \, else output 0;
+#X obj 44 373 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X msg 44 428 4;
+#X msg 84 428 2;
+#X obj 44 398 t b b b;
+#X floatatom 197 429 5 0 0 0 - - -;
+#X floatatom 44 493 5 0 0 0 - - -;
+#X text 261 461 Here we output the number fed into the third inlet.
+Remember \, that $fx does not store a value! So after firing the equation
+\, we can change the value coming to $f3. It will then be held by $f3
+until the equation has been fired a second time.;
+#X obj 44 461 expr if($f1 > $f2 \, $f3 \, 0);
+#X obj 44 565 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X msg 44 620 4;
+#X msg 84 620 2;
+#X obj 44 590 t b b b;
+#X floatatom 44 694 5 0 0 0 - - -;
+#X msg 124 620 7;
+#X floatatom 305 694 5 0 0 0 - - -;
+#X text 375 646 A second equation is added: && means "and" so it is
+possible to check for two conditions. If both are true \, we get a
+"1" as output \, else we get the the result of the last equation \,
+which will be 4^2.;
+#X obj 44 653 expr if($f1 > $f2 \, $f3 \, 0) \; if($f1 > $f2 && $f2
+> $f3 \, 1 \, pow($f1 \, 2)) \;;
+#X text 193 132;
+#X connect 5 0 9 0;
+#X connect 6 0 8 0;
+#X connect 7 0 8 1;
+#X connect 8 0 10 0;
+#X connect 9 0 6 0;
+#X connect 9 1 7 0;
+#X connect 11 0 12 0;
+#X connect 12 0 13 0;
+#X connect 12 1 14 0;
+#X connect 13 0 8 0;
+#X connect 14 0 8 1;
+#X connect 16 0 19 0;
+#X connect 17 0 23 0;
+#X connect 18 0 23 1;
+#X connect 19 0 17 0;
+#X connect 19 1 18 0;
+#X connect 19 2 20 0;
+#X connect 20 0 23 2;
+#X connect 23 0 21 0;
+#X connect 24 0 27 0;
+#X connect 25 0 32 0;
+#X connect 26 0 32 1;
+#X connect 27 0 25 0;
+#X connect 27 1 26 0;
+#X connect 27 2 29 0;
+#X connect 29 0 32 2;
+#X connect 32 0 28 0;
+#X connect 32 1 30 0;

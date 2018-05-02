@@ -1,0 +1,48 @@
+#N canvas 65 146 906 546 10;
+#X obj 446 18 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X msg 446 38 \; pd dsp \$1;
+#X msg 249 165 start;
+#X msg 249 185 stop;
+#X msg 249 122 1;
+#X msg 249 144 0;
+#X obj 194 236 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X msg 134 27 open filname.wav;
+#X obj 161 82 openpanel;
+#X obj 161 63 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X msg 161 104 open \$1;
+#X obj 30 246 env~;
+#X obj 81 246 env~;
+#X obj 31 300 vu 15 120 empty empty -1 -8 0 10 -66577 -1 1 0;
+#X obj 82 300 vu 15 120 empty empty -1 -8 0 10 -66577 -1 1 0;
+#X obj 30 268 - 100;
+#X obj 81 268 - 100;
+#X text 208 300 Argument is Nr of Output-Channels;
+#X text 217 214 Argument is Nr of Soundfile-Channels;
+#X obj 134 212 readsf~ 2;
+#X obj 134 268 *~ 0.3;
+#X obj 194 268 *~ 0.3;
+#X obj 134 299 dac~ 1 2;
+#X text 189 62 Open from finder / browser;
+#X connect 0 0 1 0;
+#X connect 2 0 19 0;
+#X connect 3 0 19 0;
+#X connect 4 0 19 0;
+#X connect 5 0 19 0;
+#X connect 7 0 19 0;
+#X connect 8 0 10 0;
+#X connect 9 0 8 0;
+#X connect 10 0 19 0;
+#X connect 11 0 15 0;
+#X connect 12 0 16 0;
+#X connect 15 0 13 0;
+#X connect 16 0 14 0;
+#X connect 19 0 11 0;
+#X connect 19 0 20 0;
+#X connect 19 1 12 0;
+#X connect 19 1 21 0;
+#X connect 19 2 6 0;
+#X connect 20 0 22 0;
+#X connect 21 0 22 1;

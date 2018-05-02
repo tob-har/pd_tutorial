@@ -1,0 +1,10 @@
+#N canvas 601 424 558 203 10;
+#X floatatom 59 48 5 0 0 0 - - -, f 5;
+#X obj 59 67 t f b;
+#X obj 59 99 f;
+#X floatatom 59 132 5 0 0 0 - - -, f 5;
+#X text 57 24 This gives you the last float of a stream of floats;
+#X connect 0 0 1 0;
+#X connect 1 0 2 1;
+#X connect 1 1 2 0;
+#X connect 2 0 3 0;

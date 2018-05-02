@@ -1,0 +1,3 @@
+#N canvas 59 102 450 300 10;
+#X obj 138 127 pd~;
+#X obj 173 127 stdout;

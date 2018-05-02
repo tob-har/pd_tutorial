@@ -1,0 +1,44 @@
+#N canvas 648 231 649 729 10;
+#X obj 345 10 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X msg 345 30 \; pd dsp \$1;
+#X obj 36 79 openpanel;
+#X obj 36 59 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X msg 36 101 open \$1;
+#X obj 37 522 env~;
+#X obj 88 522 env~;
+#X obj 38 573 vu 15 120 empty empty -1 -8 0 10 -66577 -1 1 0;
+#X obj 89 573 vu 15 120 empty empty -1 -8 0 10 -66577 -1 1 0;
+#X obj 37 544 - 100;
+#X obj 88 544 - 100;
+#X obj 36 183 readsf~ 2;
+#X msg 67 126 open filnameXYZ.wav;
+#X text 34 32 Open Soundfile for sfplay:;
+#X obj 36 338 openpanel;
+#X msg 36 359 read -resize \$1 channel1 channel2;
+#X obj 36 317 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X obj 37 387 tabread4~ channel1;
+#X obj 171 387 tabread4~ channel2;
+#N canvas 4 23 450 278 (subpatch) 0;
+#X array channel1 273382 float 2;
+#X coords 0 1 273382 -1 200 140 1;
+#X restore 307 265 graph;
+#N canvas 4 23 450 278 (subpatch) 0;
+#X array channel2 273382 float 2;
+#X coords 0 1 273382 -1 200 140 1;
+#X restore 513 264 graph;
+#X text 37 226 Open Soundfile (Stereo) in tabread4~;
+#X text 37 487 Stereo Volume Meter;
+#X connect 0 0 1 0;
+#X connect 2 0 4 0;
+#X connect 3 0 2 0;
+#X connect 4 0 11 0;
+#X connect 5 0 9 0;
+#X connect 6 0 10 0;
+#X connect 9 0 7 0;
+#X connect 10 0 8 0;
+#X connect 12 0 11 0;
+#X connect 14 0 15 0;
+#X connect 16 0 14 0;

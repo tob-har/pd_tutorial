@@ -1,0 +1,56 @@
+#N canvas 236 62 684 691 10;
+#X text 22 23 It is very important to get familiar with the order in
+which Pd calculates an equation and processes a patch!!!;
+#X msg 54 208 2;
+#X floatatom 54 274 5 0 0 0 - - -;
+#X msg 97 208 3;
+#X obj 54 247 +;
+#X text 34 175 1) Processing of an equation: 2 + 3 = 5;
+#X text 178 202 First click an 2: This will calculate 2 + 0 = 2 \,
+because initial value of the + object is 0!;
+#X text 179 243 First click on 3: The argument of the math object will
+be set to "3". The click on 2 will fire the equation: 2 + 3 = 5;
+#X text 130 322 --> WE ALWAYS NEED TO SET THE WANTED ARGMUENT OF AN
+MATH OBJECT FIRST!!!;
+#X text 40 405 2) Order of processing with bangs;
+#X obj 62 563 +;
+#X floatatom 62 596 5 0 0 0 - - -;
+#X text 59 421 Remeber the bang! We can use it to fire a equation properly.
+But there is one thing to keep in mind:;
+#X msg 62 525 2;
+#X msg 104 525 3;
+#X obj 62 477 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X obj 188 563 +;
+#X floatatom 188 596 5 0 0 0 - - -;
+#X msg 188 525 2;
+#X msg 230 525 3;
+#X obj 188 479 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X text 312 520 Both equations look the same \, but the behave differently.
+;
+#X text 311 556 The reason is \, that Pd processes bangs in the order
+\, that the user has connected the patch cords: 1) first connected
+to 2 atom \, then 3 atom 2) first connected to 3 atom \, then 2 atom.
+;
+#X text 311 634 IT IS NEARLY IMPOSSIBLE TO REMEBER EVERY PATCH ORDER
+WITHIN A COMPLETE PD PATCH... SO WE NEED A SOLUTION HERE!!!;
+#X obj 44 107 +;
+#X msg 59 73 3;
+#X text 112 69 By sending a number atom to the right inlet of a math
+object you can set its argument. This Object will work as "+ 3" ...
+but nothing happens yet.;
+#X connect 1 0 4 0;
+#X connect 3 0 4 1;
+#X connect 4 0 2 0;
+#X connect 10 0 11 0;
+#X connect 13 0 10 0;
+#X connect 14 0 10 1;
+#X connect 15 0 13 0;
+#X connect 15 0 14 0;
+#X connect 16 0 17 0;
+#X connect 18 0 16 0;
+#X connect 19 0 16 1;
+#X connect 20 0 19 0;
+#X connect 20 0 18 0;
+#X connect 25 0 24 1;
