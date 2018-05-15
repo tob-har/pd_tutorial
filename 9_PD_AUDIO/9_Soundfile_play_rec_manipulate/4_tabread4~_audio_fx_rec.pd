@@ -18,7 +18,7 @@ Playback_Position_Monitor -2 -8 0 10 -204786 -1 -1 0 1;
 #X obj 19 349 hsl 195 20 0 1 0 0 empty r_playbackposition empty -2
 -8 0 10 -262144 -1 -1 0 1;
 #X restore 703 110 pd soundfilearrays;
-#N canvas 672 29 584 718 soundfileplayer 1;
+#N canvas 672 29 584 718 soundfileplayer 0;
 #X obj 120 44 openpanel;
 #X msg 120 65 read -resize \$1 channel1 channel2;
 #X obj 120 23 r s_openfile;
@@ -116,7 +116,7 @@ Playback_Position_Monitor -2 -8 0 10 -204786 -1 -1 0 1;
 #X obj 120 137 bng 15 250 50 0 s_stop empty Stop 17 7 0 10 -258113
 -1 -1;
 #X obj 272 92 hsl 128 20 -1 1 0 0 s_playbackspeed r_playbackspeed Playback_Speed_and_Direction
--2 -8 0 10 -232576 -1 -1 12700 1;
+-2 -8 0 10 -232576 -1 -1 6350 1;
 #X obj 272 132 hsl 128 20 0 1 0 0 s_playbackphase r_playbackphase Playback_Phase
 -2 -8 0 10 -203904 -1 -1 0 1;
 #X obj 453 89 vsl 20 60 0 1 0 0 s_volume r_volume Volume 0 -9 0 10
@@ -245,9 +245,9 @@ Play_Original_File 17 7 0 10 -204786 -1 -1;
 #X connect 19 0 18 0;
 #X restore 121 688 pd playbackspeedrandomizer;
 #X obj 180 607 vsl 20 50 -100 100 0 0 s_speed_influ_fast r_speed_influ_fast
-Speed_Hi 0 -9 0 10 -262144 -1 -1 2526 1;
+Speed_Hi 0 -9 0 10 -262144 -1 -1 2450 1;
 #X obj 240 607 vsl 20 50 -1 1 0 0 s_speed_influ_slow r_speed_influ_slow
-Speed_Lo 0 -9 0 10 -262144 -1 -1 4900 1;
+Speed_Lo 0 -9 0 10 -262144 -1 -1 2450 1;
 #X obj 300 607 vsl 20 50 1 2000 0 0 s_speed_influ_time r_speed_influ_time
 Change_Time 0 -9 0 10 -262144 -1 -1 733 1;
 #X floatatom 180 665 5 0 0 0 - - -, f 5;
