@@ -31,6 +31,9 @@
 #X restore 513 264 graph;
 #X text 37 226 Open Soundfile (Stereo) in tabread4~;
 #X text 37 487 Stereo Volume Meter;
+#X msg 38 442 read -resize -maxsize 4.3e+07 \$1 channel1 channel2;
+#X text 44 423 Flags for samples longer then 4e+06 samples (max lenghts)
+;
 #X connect 0 0 1 0;
 #X connect 2 0 4 0;
 #X connect 3 0 2 0;

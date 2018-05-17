@@ -18,7 +18,7 @@ Playback_Position_Monitor -2 -8 0 10 -204786 -1 -1 0 1;
 #X obj 19 349 hsl 195 20 0 1 0 0 empty r_playbackposition empty -2
 -8 0 10 -262144 -1 -1 0 1;
 #X restore 703 110 pd soundfilearrays;
-#N canvas 672 29 584 718 soundfileplayer 0;
+#N canvas 672 29 597 752 soundfileplayer 0;
 #X obj 120 44 openpanel;
 #X msg 120 65 read -resize \$1 channel1 channel2;
 #X obj 120 23 r s_openfile;

@@ -1,20 +1,20 @@
-#N canvas 129 109 903 819 10;
-#X obj 526 18 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
+#N canvas 129 109 903 885 10;
+#X obj 526 18 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
 1;
 #X msg 526 38 \; pd dsp \$1;
-#X obj 60 667 dac~ 1 2;
-#X obj 60 645 *~;
-#X obj 113 645 *~;
-#X obj 155 576 vsl 20 60 0 1 0 0 empty empty empty 0 -9 0 10 -261682
--1 -1 1700 1;
+#X obj 60 707 dac~ 1 2;
+#X obj 60 685 *~;
+#X obj 113 685 *~;
+#X obj 155 616 vsl 20 60 0 1 0 0 empty empty empty 0 -9 0 10 -261682
+-1 -1 0 1;
 #N canvas 4 23 450 278 (subpatch) 0;
 #X array channel1 273382 float 2;
 #X coords 0 1 273382 -1 200 140 1;
-#X restore 526 132 graph;
+#X restore 526 172 graph;
 #N canvas 4 23 450 278 (subpatch) 0;
 #X array channel2 273382 float 2;
 #X coords 0 1 273382 -1 200 140 1;
-#X restore 526 297 graph;
+#X restore 526 337 graph;
 #X obj 60 28 bng 15 250 50 0 empty empty empty 17 7 0 10 -4034 -1 -1
 ;
 #X obj 60 58 openpanel;
@@ -22,37 +22,37 @@
 #X text 526 81 Two Arrays needed to store each Audio Channel. So its
 two arrays for a stereo soundfile.;
 #X text 134 58 Open Soundfile Routine.;
-#X text 159 647 Volume Control (Check Propertiers!);
+#X text 159 687 Volume Control (Check Propertiers!);
 #X text 100 102 (Read File \, change array size to soundfile size \,
 filname \, read into the arrays);
-#X obj 60 157 soundfiler;
-#X floatatom 94 180 12 0 0 0 - - -, f 12;
-#X obj 60 245 expr 44100 / $f1;
-#X text 145 155 Outputs the number of all the single samples;
-#X obj 60 317 phasor~;
-#X floatatom 94 270 12 0 0 0 - - -, f 12;
-#X obj 60 373 *~;
-#X obj 60 426 tabread4~ channel1;
-#X text 192 243 Sample Rate calculation.;
-#X text 122 320 Saw-Ramp from 0 to 1 reading out the arrays.;
-#X obj 113 454 tabread4~ channel2;
-#X obj 296 433 snapshot~;
-#X obj 296 412 metro 20;
-#X obj 296 392 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+#X obj 60 197 soundfiler;
+#X floatatom 94 220 12 0 0 0 - - -, f 12;
+#X obj 60 285 expr 44100 / $f1;
+#X text 145 195 Outputs the number of all the single samples;
+#X obj 60 357 phasor~;
+#X floatatom 94 310 12 0 0 0 - - -, f 12;
+#X obj 60 413 *~;
+#X obj 60 466 tabread4~ channel1;
+#X text 192 283 Sample Rate calculation.;
+#X text 122 360 Saw-Ramp from 0 to 1 reading out the arrays.;
+#X obj 113 494 tabread4~ channel2;
+#X obj 296 473 snapshot~;
+#X obj 296 452 metro 20;
+#X obj 296 432 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
 1;
-#X floatatom 296 455 12 0 0 0 - - -, f 12;
-#X obj 296 501 /;
-#X obj 296 501 /;
-#X floatatom 296 524 5 0 0 1 Playbackposition_Value - r_playbackposition
+#X floatatom 296 495 12 0 0 0 - - -, f 12;
+#X obj 296 541 /;
+#X obj 296 541 /;
+#X floatatom 296 564 5 0 0 1 Playbackposition_Value - r_playbackposition
 , f 5;
-#X obj 94 201 s totalsamples;
-#X obj 78 346 r totalsamples;
-#X obj 314 477 r totalsamples;
-#X obj 528 443 hsl 195 20 0 1 0 0 empty r_playbackposition empty -2
+#X obj 94 241 s totalsamples;
+#X obj 78 386 r totalsamples;
+#X obj 314 517 r totalsamples;
+#X obj 528 483 hsl 195 20 0 1 0 0 empty r_playbackposition empty -2
 -8 0 10 -262144 -1 -1 0 1;
-#X text 519 471 (Playbackposition \, value 0 to 1);
+#X text 519 511 (Playbackposition \, value 0 to 1);
 #X text 87 26 Open Soundfile.;
-#X floatatom 155 670 5 0 0 0 - - -, f 5;
+#X floatatom 155 710 5 0 0 0 - - -, f 5;
 #N canvas 0 22 450 278 (subpatch) 0;
 #X array sftest 44100 float 3;
 #A 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
@@ -1380,8 +1380,12 @@ filname \, read into the arrays);
 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
 0 0 0;
 #X coords 0 1 44100 -1 200 140 1;
-#X restore 528 636 graph;
-#X obj 528 601 tabread4~ sftest;
+#X restore 528 676 graph;
+#X obj 528 641 tabread4~ sftest;
+#X msg 101 153 read -resize -maxsize 4.3e+07 \$1 channel1 channel2
+;
+#X text 107 134 Flags for samples longer then 4e+06 samples (max lenghts)
+;
 #X connect 0 0 1 0;
 #X connect 3 0 2 0;
 #X connect 4 0 2 1;
