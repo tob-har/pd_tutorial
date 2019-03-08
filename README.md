@@ -2,7 +2,7 @@
 KHM Köln SoSe 2018
 
 www.puredata.info
-[Download Pure Data 0.48-1 here](http://puredata.info/downloads/pure-data)
+[Download Pure Data here](http://puredata.info/downloads/pure-data)
 
 PD Patches zu VST-Plugin
 [Camomile](https://github.com/pierreguillot/Camomile)
