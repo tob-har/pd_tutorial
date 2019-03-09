@@ -1,5 +1,4 @@
 #N canvas 318 408 623 390 10;
-#X text 27 49 Pd Vanilla 0.47 Pd Vanilla 0.48 Pd Extended Pd ...;
 #X text 147 85 Externals;
 #X text 228 124 Abstractions;
 #X text 292 167 Pd Files;
@@ -8,4 +7,6 @@
 #X text 37 250 Setup Pd:;
 #X text 36 276 1) Download Pd (Several Distributions can live on the
 same machine) 2) Set search paths 3) Recommend: One Pd Folder 4) Recommend:
-One Personal Abstraction folder wirh search path;
+One Personal Abstraction folder with search path;
+#X text 27 49 Pd Vanilla 0.48 Pd Vanilla 0.49-1 Pd Extended Pd ...
+;

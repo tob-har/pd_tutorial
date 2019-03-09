@@ -1,4 +1,4 @@
-#N canvas 106 23 773 770 10;
+#N canvas 545 72 773 770 10;
 #X text 30 35 Lets understand MESSAGES;
 #X text 34 127 Here we go:;
 #X obj 87 207 print;

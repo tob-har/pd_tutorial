@@ -35,7 +35,7 @@ two arrays for a stereo soundfile.;
 -8 0 10 -262144 -1 -1 0 1;
 #X text 518 467 (Playbackposition \, value 0 to 1);
 #X text 147 66 Open Soundfile.;
-#N canvas 4 23 450 300 playbackposition 1;
+#N canvas 4 23 450 300 playbackposition 0;
 #X obj 96 83 snapshot~;
 #X floatatom 96 105 12 0 0 0 - - -, f 12;
 #X obj 96 151 /;
