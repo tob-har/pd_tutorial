@@ -1,5 +1,6 @@
 # Pure Data Tutorial 
-KHM Köln SoSe 2018
+
+[Puredata Tutorial Videos](https://www.youtube.com/watch?v=oimJeJB-Jgs&list=PL5ISYISvtBhVbxauePvilRv8OBgHuZn1B)
 
 www.puredata.info
 [Download Pure Data here](http://puredata.info/downloads/pure-data)
