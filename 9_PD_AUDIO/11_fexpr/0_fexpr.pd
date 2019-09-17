@@ -1,0 +1,461 @@
+#N canvas 922 78 618 253 10;
+#X obj 250 219 dac~ 1 2;
+#X obj 23 15 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1 1
+;
+#X msg 23 36 \; pd dsp \$1;
+#N canvas 683 205 701 452 fexpr_volume 0;
+#X obj 281 425 outlet~;
+#X obj 331 425 outlet~;
+#X obj 38 39 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X obj 38 60 openpanel;
+#X msg 38 81 open \$1;
+#X obj 38 111 readsf~ 2;
+#X obj 250 182 hsl 128 15 0 1 0 0 empty empty empty -2 -8 0 10 -262144
+-1 -1 0 1;
+#X msg 44 217 clear;
+#X msg 44 240 start;
+#X msg 44 262 stop;
+#X obj 411 33 block~ 1024;
+#X text 409 16 Reblock subpatch;
+#X obj 142 78 phasor~;
+#X floatatom 142 36 5 0 0 0 - - -;
+#X obj 101 81 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X text 34 14 File Playback;
+#X text 137 13 Signal Sources;
+#X obj 208 79 noise~;
+#X obj 142 99 *~ 0.5;
+#X obj 402 99 *~ 0.5;
+#X obj 208 100 *~ 0.3;
+#X obj 142 56 sig~ 200;
+#X floatatom 301 205 5 0 0 0 - - -;
+#X obj 142 368 fexpr~ $x1[0]*$x3 \; $x2[0]*$x3;
+#X obj 247 227 line~;
+#X msg 247 206 \$1 20;
+#X obj 510 182 hsl 128 15 0 1 0 0 empty empty empty -2 -8 0 10 -262144
+-1 -1 0 1;
+#X floatatom 561 205 5 0 0 0 - - -;
+#X obj 402 368 fexpr~ $x1[0]*$f3 \; $x2[0]*$f3;
+#X obj 402 78 osc~ 200;
+#X text 510 159 Simple volume control;
+#X text 247 163 Smooth volume control;
+#X text 35 182 Start & Stop fexpr;
+#X connect 2 0 3 0;
+#X connect 3 0 4 0;
+#X connect 4 0 5 0;
+#X connect 6 0 22 0;
+#X connect 6 0 25 0;
+#X connect 7 0 23 0;
+#X connect 7 0 28 0;
+#X connect 8 0 23 0;
+#X connect 8 0 28 0;
+#X connect 9 0 23 0;
+#X connect 9 0 28 0;
+#X connect 12 0 18 0;
+#X connect 13 0 21 0;
+#X connect 14 0 5 0;
+#X connect 17 0 20 0;
+#X connect 18 0 23 0;
+#X connect 18 0 23 1;
+#X connect 19 0 28 0;
+#X connect 19 0 28 1;
+#X connect 20 0 23 1;
+#X connect 20 0 23 0;
+#X connect 21 0 12 0;
+#X connect 21 0 29 0;
+#X connect 23 0 0 0;
+#X connect 23 1 1 0;
+#X connect 24 0 23 2;
+#X connect 25 0 24 0;
+#X connect 26 0 27 0;
+#X connect 26 0 28 2;
+#X connect 28 0 0 0;
+#X connect 28 1 1 0;
+#X connect 29 0 19 0;
+#X restore 23 73 pd fexpr_volume;
+#N canvas 748 185 786 502 FIR_filter 0;
+#X obj 190 426 outlet~;
+#X obj 243 426 outlet~;
+#X obj 38 39 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X obj 38 60 openpanel;
+#X msg 38 81 open \$1;
+#X obj 38 111 readsf~ 2;
+#X obj 275 175 hsl 128 15 0 1 0 0 empty empty empty -2 -8 0 10 -262144
+-1 -1 0 1;
+#X msg 44 217 clear;
+#X msg 44 240 start;
+#X msg 44 262 stop;
+#X obj 411 33 block~ 1024;
+#X text 409 16 Reblock subpatch;
+#X obj 142 78 phasor~;
+#X obj 101 81 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X text 34 14 File Playback;
+#X text 137 13 Signal Sources;
+#X obj 202 78 noise~;
+#X obj 142 99 *~ 0.5;
+#X obj 202 99 *~ 0.3;
+#X obj 142 56 sig~ 200;
+#X floatatom 320 196 5 0 0 0 - - -;
+#X obj 272 220 line~;
+#X msg 272 199 \$1 20;
+#X text 269 156 Smooth volume control;
+#X obj 142 368 fexpr~ ($x1[0] + $x1[$f4]) * $x3 \; ($x2[0] + $x2[$f4])
+* $x3;
+#X floatatom 551 315 5 -1023 0 0 - - -;
+#X text 489 193 SET SAMPLIG RATE TO 48000 !!!;
+#X floatatom 142 34 5 0 0 0 - - -;
+#X obj 444 314 *~ 0.2;
+#X obj 374 314 *~ 0.2;
+#X obj 304 314 *~ 0.2;
+#X obj 304 293 osc~ 4800;
+#X obj 374 293 osc~ 2400;
+#X obj 444 293 osc~ 1200;
+#X msg 522 240 - 5;
+#X msg 552 260 - 10;
+#X msg 589 280 - 20;
+#X msg 492 220 0;
+#X text 526 219 Filter nothing;
+#X text 554 242 Filter 4800 Hz;
+#X text 588 260 Filter 2400 Hz;
+#X text 623 280 Filter 1200 Hz;
+#X text 300 271 Plays back three sine frequencies;
+#X text 413 421 $x[0] + $x[-n];
+#X text 529 421 for: 0 >= -n >= -blocksize;
+#X text 412 399 EXPRESSION:;
+#X connect 2 0 3 0;
+#X connect 3 0 4 0;
+#X connect 4 0 5 0;
+#X connect 6 0 20 0;
+#X connect 6 0 22 0;
+#X connect 7 0 24 0;
+#X connect 8 0 24 0;
+#X connect 9 0 24 0;
+#X connect 12 0 17 0;
+#X connect 13 0 5 0;
+#X connect 16 0 18 0;
+#X connect 19 0 12 0;
+#X connect 21 0 24 2;
+#X connect 22 0 21 0;
+#X connect 24 0 0 0;
+#X connect 24 1 1 0;
+#X connect 25 0 24 3;
+#X connect 27 0 19 0;
+#X connect 28 0 24 0;
+#X connect 28 0 24 1;
+#X connect 29 0 24 0;
+#X connect 29 0 24 1;
+#X connect 30 0 24 0;
+#X connect 30 0 24 1;
+#X connect 31 0 30 0;
+#X connect 32 0 29 0;
+#X connect 33 0 28 0;
+#X connect 34 0 25 0;
+#X connect 35 0 25 0;
+#X connect 36 0 25 0;
+#X connect 37 0 25 0;
+#X restore 123 73 pd FIR_filter;
+#N canvas 683 205 701 452 channel_filter 0;
+#X obj 289 419 outlet~;
+#X obj 339 419 outlet~;
+#X obj 38 39 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X obj 38 60 openpanel;
+#X msg 38 81 open \$1;
+#X obj 38 111 readsf~ 2;
+#X obj 250 182 hsl 128 15 0 1 0 0 empty empty empty -2 -8 0 10 -262144
+-1 -1 0 1;
+#X msg 44 217 clear;
+#X msg 44 240 start;
+#X msg 44 262 stop;
+#X obj 411 33 block~ 1024;
+#X text 409 16 Reblock subpatch;
+#X obj 101 81 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X text 34 14 File Playback;
+#X text 137 13 Signal Sources;
+#X obj 258 78 noise~;
+#X obj 142 99 *~ 0.5;
+#X obj 427 99 *~ 0.5;
+#X floatatom 301 205 5 0 0 0 - - -;
+#X obj 247 227 line~;
+#X msg 247 206 \$1 20;
+#X floatatom 283 301 5 -1023 0 0 - - -;
+#X obj 283 342 line~;
+#X msg 283 320 \$1 20;
+#X obj 258 99 *~ 0.05;
+#X floatatom 560 292 5 -1023 0 0 - - -;
+#X obj 560 343 line~;
+#X msg 560 321 \$1 20;
+#X obj 520 182 hsl 128 15 0 1 0 0 empty empty empty -2 -8 0 10 -262144
+-1 -1 0 1;
+#X floatatom 571 205 5 0 0 0 - - -;
+#X obj 517 227 line~;
+#X msg 517 206 \$1 20;
+#X obj 142 368 fexpr~ $x1[0]*$x3 \; ($x2[0] + $x2[$x4]) *$x3;
+#X obj 603 343 line~;
+#X msg 603 321 \$1 20;
+#X floatatom 600 292 5 -1023 0 0 - - -;
+#X obj 432 368 fexpr~ ($x1[0] + $x1[$x4]) * $x3 \; ($x2[0] + $x2[$x5])
+* $x3;
+#X obj 142 78 phasor~ 111;
+#X obj 427 78 osc~ 222;
+#X connect 2 0 3 0;
+#X connect 3 0 4 0;
+#X connect 4 0 5 0;
+#X connect 6 0 18 0;
+#X connect 6 0 20 0;
+#X connect 7 0 32 0;
+#X connect 8 0 32 0;
+#X connect 9 0 32 0;
+#X connect 12 0 5 0;
+#X connect 15 0 24 0;
+#X connect 16 0 32 0;
+#X connect 16 0 32 1;
+#X connect 17 0 36 0;
+#X connect 17 0 36 1;
+#X connect 19 0 32 2;
+#X connect 20 0 19 0;
+#X connect 21 0 23 0;
+#X connect 22 0 32 3;
+#X connect 23 0 22 0;
+#X connect 24 0 32 0;
+#X connect 24 0 32 1;
+#X connect 25 0 27 0;
+#X connect 26 0 36 3;
+#X connect 27 0 26 0;
+#X connect 28 0 29 0;
+#X connect 28 0 31 0;
+#X connect 30 0 36 2;
+#X connect 31 0 30 0;
+#X connect 32 0 0 0;
+#X connect 32 1 1 0;
+#X connect 33 0 36 4;
+#X connect 34 0 33 0;
+#X connect 35 0 34 0;
+#X connect 36 0 0 0;
+#X connect 36 1 1 0;
+#X connect 37 0 16 0;
+#X connect 38 0 17 0;
+#X restore 213 73 pd channel_filter;
+#N canvas 680 391 701 452 abs_calc 0;
+#X obj 281 425 outlet~;
+#X obj 331 425 outlet~;
+#X obj 38 39 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X obj 38 60 openpanel;
+#X msg 38 81 open \$1;
+#X obj 38 111 readsf~ 2;
+#X obj 280 182 hsl 128 15 0 1 0 0 empty empty empty -2 -8 0 10 -262144
+-1 -1 0 1;
+#X msg 44 217 clear;
+#X msg 44 240 start;
+#X msg 44 262 stop;
+#X obj 411 33 block~ 1024;
+#X text 409 16 Reblock subpatch;
+#X obj 142 78 phasor~;
+#X floatatom 142 36 5 0 0 0 - - -;
+#X obj 101 81 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X text 34 14 File Playback;
+#X text 137 13 Signal Sources;
+#X obj 268 79 noise~;
+#X obj 142 99 *~ 0.5;
+#X obj 192 99 *~ 0.5;
+#X obj 268 100 *~ 0.3;
+#X obj 142 56 sig~ 200;
+#X floatatom 331 205 5 0 0 0 - - -;
+#X obj 277 227 line~;
+#X msg 277 206 \$1 20;
+#X obj 192 78 osc~ 200;
+#X obj 347 318 line~;
+#X msg 347 297 \$1 20;
+#X floatatom 346 260 5 0 0 0 - - -;
+#X obj 142 368 fexpr~ ($x1[0] + abs($x1[$x4]))*$x3 \; $x2[0]*$x3;
+#X text 394 376 Use abs() to avoid negative values;
+#X connect 2 0 3 0;
+#X connect 3 0 4 0;
+#X connect 4 0 5 0;
+#X connect 6 0 22 0;
+#X connect 6 0 24 0;
+#X connect 7 0 29 0;
+#X connect 8 0 29 0;
+#X connect 9 0 29 0;
+#X connect 12 0 18 0;
+#X connect 13 0 21 0;
+#X connect 14 0 5 0;
+#X connect 17 0 20 0;
+#X connect 18 0 29 0;
+#X connect 18 0 29 1;
+#X connect 21 0 12 0;
+#X connect 21 0 25 0;
+#X connect 23 0 29 2;
+#X connect 24 0 23 0;
+#X connect 25 0 19 0;
+#X connect 26 0 29 3;
+#X connect 27 0 26 0;
+#X connect 28 0 27 0;
+#X connect 29 0 0 0;
+#X connect 29 1 1 0;
+#X restore 329 73 pd abs_calc;
+#N canvas 376 479 1211 452 abs_calc 1;
+#X obj 858 394 outlet~;
+#X obj 908 394 outlet~;
+#X obj 38 39 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X obj 38 60 openpanel;
+#X msg 38 81 open \$1;
+#X obj 38 111 readsf~ 2;
+#X obj 280 177 hsl 128 15 0 1 0 0 empty empty empty -2 -8 0 10 -262144
+-1 -1 6000 1;
+#X msg 44 217 clear;
+#X msg 44 240 start;
+#X msg 44 262 stop;
+#X text 409 16 Reblock subpatch;
+#X obj 142 78 phasor~;
+#X floatatom 142 36 5 0 0 0 - - -;
+#X obj 101 81 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
+1;
+#X text 34 14 File Playback;
+#X text 137 13 Signal Sources;
+#X obj 328 79 noise~;
+#X obj 142 99 *~ 0.5;
+#X obj 192 99 *~ 0.5;
+#X obj 142 56 sig~ 200;
+#X floatatom 331 205 5 0 0 0 - - -;
+#X obj 277 227 line~;
+#X msg 277 206 \$1 20;
+#X obj 192 78 osc~ 200;
+#X obj 572 334 line~;
+#X msg 569 263 \$1 20;
+#X floatatom 567 232 5 -2047 0 0 - - -;
+#X obj 142 368 fexpr~ (($x1[0] + $x1[$x4]) / 2) * $x3 \; (($x2[$x5]
++ $x2[$x4]) / 2) * $x3, f 93;
+#X obj 672 334 line~;
+#X msg 672 312 \$1 20;
+#X floatatom 667 232 5 -2047 0 0 - - -;
+#X obj 568 70 hsl 128 15 -127 0 0 0 empty empty empty -2 -8 0 10 -262144
+-1 -1 12300 1;
+#X floatatom 523 121 5 0 0 0 - - -;
+#X msg 498 167 \$1 1000;
+#X msg 578 167 \$1 1600;
+#X obj 252 99 *~ 0.5;
+#X obj 252 78 osc~ 200;
+#X obj 271 52 +~ 1;
+#X floatatom 277 16 5 0 0 0 - - -;
+#X obj 330 100 *~ 0.05;
+#X obj 788 169 array define -k wavetab;
+#A 0 0.0473394 0.0774985 0.0785758 0.0873177 0.106653 0.130541 0.14012
+0.145039 0.159903 0.184035 0.19771 0.189797 0.22379 0.228142 0.260403
+0.247731 0.286927 0.270657 0.305712 0.314504 0.323596 0.338223 0.358326
+0.362407 0.366557 0.394853 0.39165 0.406525 0.402695 0.413991 0.430139
+0.440971 0.445792 0.438754 0.474441 0.457764 0.479399 0.346876 0.36746
+0.359414 0.364227 0.241616 0.239165 0.237617 0.229783 0.24029 0.230879
+0.214912 0.216379 0.22734 0.23137 0.203665 0.2053 0.209749 0.191664
+0.196494 0.174941 0.164567 0.144553 0.166941 0.143546 0.13443 0.117788
+0.123655 0.100102 0.0986762 0.0827033 0.0818819 0.065155 0.0452315
+0.0327282 0.0467635 0.0216975 0.00704298 -0.0207662 0.00843878 -0.0240394
+-0.0314002 -0.0408198 -0.0274242 -0.0644625 -0.074005 -0.0635302 -0.0681494
+-0.100678 -0.112061 -0.0959112 -0.103505 -0.117109 -0.111414 -0.120029
+-0.11058 -0.115169 -0.105909 -0.132564 -0.117709 -0.11146 -0.113663
+-0.125306 -0.114813 -0.100544 -0.112379 -0.101039 -0.0936638 -0.0767407
+-0.0972907 -0.0776239 -0.0763117 -0.0676977 -0.0564374 -0.0566083 -0.0371716
+-0.0380473 -0.0049612 -0.00362095 0.0213382 0.0298098 0.0396846 0.0413128
+0.0758713 0.090377 0.0943308 0.101518 0.12468 0.143277 0.164043 0.177022
+0.171087 0.187946 0.207889 0.216962 0.218789 0.237393 0.258256 0.269175
+0.278968 0.296519 0.315759 0.3345 0.341977 0.352257 0.350451 0.374639
+0.384443 0.399132 0.385701 0.402661 0.411807 0.429386 0.42851 0.443599
+0.441792 0.458505 0.458883 0.483211 0.357917 0.349967 0.360118 0.357648
+0.247275 0.24231 0.238833 0.221878 0.230391 0.232093 0.213491 0.226723
+0.208385 0.210384 0.19108 0.207686 0.188868 0.183469 0.17527 0.165118
+0.174791 0.156536 0.161175 0.141976 0.135964 0.12365 0.112754 0.113392
+0.0868598 0.0695048 0.0701429 0.0533958 0.0580958 0.0302385 0.0325507
+0.0134267 0.00886493 0.000688035 -0.00529894 -0.023555 -0.0362345 -0.0284333
+-0.0285428 -0.0645549 -0.0511507 -0.0687932 -0.0602233 -0.0870761 -0.084142
+-0.0972529 -0.0894023 -0.102328 -0.109114 -0.101344 -0.105573 -0.112113
+-0.124974 -0.112933 -0.121229 -0.124753 -0.12506 -0.111924 -0.111751
+-0.111956 -0.10196 -0.0835044 -0.085191 -0.0955566 -0.0877645 -0.0635577
+-0.0693498 -0.0570941 -0.0643706 -0.0304881 -0.0397887 -0.000906231
+-0.027294 0.0021589 -0.00136346 0.0418688 0.0331944 0.0466513 0.0601983
+0.091962 0.0919057 0.119376 0.120415 0.147128 0.154891 0.183707 0.164491
+0.189993 0.219296 0.222811 0.223961 0.231332 0.268666 0.277032 0.283406
+0.2943 0.327304;
+#X obj 549 91 t b f;
+#X obj 883 301 tabosc4~ wavetab;
+#X obj 883 332 *~ 0.3;
+#X floatatom 886 246 5 0 0 0 - - -;
+#X obj 886 279 sig~;
+#X obj 1004 353 hsl 128 15 0 1 0 0 empty empty empty -2 -8 0 10 -262144
+-1 -1 12700 1;
+#X obj 189 422 tabsend~ wavetab;
+#X obj 790 281 *~ 0;
+#X obj 764 207 hsl 128 15 0 1 0 0 empty empty empty -2 -8 0 10 -262144
+-1 -1 0 1;
+#X floatatom 799 230 5 0 0 0 - - -;
+#X obj 411 33 block~ 256;
+#X msg 791 112 resize 259;
+#X connect 2 0 3 0;
+#X connect 3 0 4 0;
+#X connect 4 0 5 0;
+#X connect 6 0 20 0;
+#X connect 6 0 22 0;
+#X connect 7 0 27 0;
+#X connect 8 0 27 0;
+#X connect 9 0 27 0;
+#X connect 11 0 17 0;
+#X connect 12 0 19 0;
+#X connect 13 0 5 0;
+#X connect 16 0 39 0;
+#X connect 17 0 27 0;
+#X connect 17 0 27 1;
+#X connect 18 0 27 0;
+#X connect 19 0 11 0;
+#X connect 19 0 23 0;
+#X connect 19 0 37 0;
+#X connect 21 0 27 2;
+#X connect 22 0 21 0;
+#X connect 23 0 18 0;
+#X connect 24 0 27 3;
+#X connect 25 0 24 0;
+#X connect 26 0 25 0;
+#X connect 27 0 47 0;
+#X connect 28 0 27 4;
+#X connect 29 0 28 0;
+#X connect 30 0 29 0;
+#X connect 31 0 41 0;
+#X connect 32 0 33 0;
+#X connect 32 0 34 0;
+#X connect 33 0 24 0;
+#X connect 34 0 28 0;
+#X connect 35 0 27 1;
+#X connect 36 0 35 0;
+#X connect 37 0 36 0;
+#X connect 38 0 37 1;
+#X connect 39 0 27 0;
+#X connect 39 0 27 1;
+#X connect 41 1 32 0;
+#X connect 42 0 43 0;
+#X connect 43 0 48 0;
+#X connect 43 0 0 0;
+#X connect 43 0 1 0;
+#X connect 44 0 45 0;
+#X connect 45 0 42 0;
+#X connect 46 0 43 1;
+#X connect 48 0 27 0;
+#X connect 49 0 48 1;
+#X connect 49 0 50 0;
+#X connect 52 0 40 0;
+#X restore 419 73 pd abs_calc;
+#X connect 1 0 2 0;
+#X connect 3 0 0 0;
+#X connect 3 1 0 1;
+#X connect 4 0 0 0;
+#X connect 4 1 0 1;
+#X connect 5 0 0 0;
+#X connect 5 1 0 1;
+#X connect 6 0 0 0;
+#X connect 6 1 0 1;
+#X connect 7 0 0 0;
+#X connect 7 1 0 1;

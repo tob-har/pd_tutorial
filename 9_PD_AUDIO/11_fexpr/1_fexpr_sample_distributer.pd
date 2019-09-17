@@ -1,0 +1,79 @@
+#N canvas 922 78 618 253 10;
+#X obj 250 219 dac~ 1 2;
+#X obj 23 15 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0 1
+;
+#X msg 23 36 \; pd dsp \$1;
+#N canvas 683 205 701 452 sample_block_distributer 1;
+#X obj 281 425 outlet~;
+#X obj 331 425 outlet~;
+#X obj 38 39 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X obj 38 60 openpanel;
+#X msg 38 81 open \$1;
+#X obj 38 111 readsf~ 2;
+#X obj 496 260 hsl 128 15 0 1 0 0 empty empty empty -2 -8 0 10 -262144
+-1 -1 1900 1;
+#X msg 44 217 clear;
+#X msg 44 240 start;
+#X msg 44 262 stop;
+#X text 222 221 Reblock subpatch;
+#X obj 142 78 phasor~;
+#X floatatom 142 36 5 0 0 0 - - -;
+#X obj 101 81 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X text 34 14 File Playback;
+#X text 137 13 Signal Sources;
+#X obj 318 78 noise~;
+#X obj 142 99 *~ 0.5;
+#X obj 259 101 *~ 0.5;
+#X obj 318 99 *~ 0.3;
+#X obj 142 56 sig~ 200;
+#X floatatom 549 281 5 0 0 0 - - -;
+#X obj 495 303 line~;
+#X msg 495 282 \$1 20;
+#X obj 259 80 osc~ 200;
+#X text 495 239 Smooth volume control;
+#X obj 521 116 * 128;
+#X floatatom 521 97 5 0 8 0 - - -;
+#X floatatom 521 137 5 0 0 0 - - -;
+#X obj 597 369 v inc;
+#X obj 224 238 block~ 2048;
+#X text 156 279 Distribute between two channels:;
+#X text 173 297 First output plays first half of audio block;
+#X text 174 311 Second output plays second half of audio block;
+#X obj 142 368 fexpr~ ( if(inc >= 0 && inc <= 1023 \, $x1[0] \, 0)
+) * $x3 \; ( if(inc >= 1024 && inc <= 2047 \, $x1[0] \, 0) ) * $x3
+\; if(inc >= 0 && inc <= 2047 \, inc = inc + 1 \, inc = 0), f 74;
+#X text 178 329 Change blocksize and inc values if necessary.;
+#X msg 597 345 0;
+#X obj 597 321 loadbang;
+#X connect 2 0 3 0;
+#X connect 3 0 4 0;
+#X connect 4 0 5 0;
+#X connect 6 0 21 0;
+#X connect 6 0 23 0;
+#X connect 7 0 34 0;
+#X connect 8 0 34 0;
+#X connect 9 0 34 0;
+#X connect 11 0 17 0;
+#X connect 12 0 20 0;
+#X connect 13 0 5 0;
+#X connect 16 0 19 0;
+#X connect 17 0 34 0;
+#X connect 20 0 11 0;
+#X connect 20 0 24 0;
+#X connect 22 0 34 2;
+#X connect 23 0 22 0;
+#X connect 24 0 18 0;
+#X connect 26 0 28 0;
+#X connect 27 0 26 0;
+#X connect 34 0 0 0;
+#X connect 34 1 1 0;
+#X connect 36 0 29 0;
+#X connect 37 0 36 0;
+#X restore 23 73 pd sample_block_distributer;
+#X text 211 71 Distribute sample blocks \, and individual samples to
+different audio streams (audio outputs).;
+#X connect 1 0 2 0;
+#X connect 3 0 0 0;
+#X connect 3 1 0 1;
