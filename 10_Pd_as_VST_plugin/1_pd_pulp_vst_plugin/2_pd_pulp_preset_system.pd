@@ -1,0 +1,218 @@
+#N canvas 390 146 1290 681 12;
+#X obj 68 179 s pdpulp_p1;
+#X obj 158 179 s pdpulp_p2;
+#X obj 248 179 s pdpulp_p3;
+#X obj 338 179 s pdpulp_p4;
+#X obj 428 179 s pdpulp_p5;
+#X obj 68 324 s pdpulp_p6;
+#X obj 158 324 s pdpulp_p7;
+#X obj 248 324 s pdpulp_p8;
+#X obj 338 324 s pdpulp_9;
+#X obj 428 324 s pdpulp_p10;
+#X obj 840 142 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X text 861 138 Load this preset;
+#X obj 839 105 loadbang;
+#X text 910 108 connect to load on startup;
+#X obj 68 113 t b a;
+#X obj 158 113 t b a;
+#X msg 68 147 name1 0.5;
+#X msg 158 147 name2 0.5;
+#X obj 158 89 r preset_p2;
+#X obj 248 113 t b a;
+#X obj 338 113 t b a;
+#X msg 248 147 name3 0.5;
+#X msg 338 147 name4 0.5;
+#X obj 428 113 t b a;
+#X msg 428 147 name5 0.5;
+#X obj 68 260 t b a;
+#X obj 158 260 t b a;
+#X msg 68 294 name6 0.5;
+#X msg 158 294 name7 0.5;
+#X obj 248 260 t b a;
+#X obj 338 260 t b a;
+#X msg 248 294 name8 0.5;
+#X msg 338 294 name9 0.5;
+#X obj 428 260 t b a;
+#X msg 428 294 4_name10 0.5;
+#X obj 248 89 r preset_p3;
+#X obj 338 89 r preset_p4;
+#X obj 428 89 r preset_p5;
+#X obj 68 236 r preset_p6;
+#X obj 158 236 r preset_p7;
+#X obj 248 236 r preset_p8;
+#X obj 338 236 r preset_p9;
+#X obj 428 236 r preset_p10;
+#X msg 1040 172 \; preset_p1 set name 0.5 \; preset_p2 set name 0.5
+\; preset_p3 set name 0.5 \; preset_p4 set name 0.5 \; preset_p5 set
+name 0.5 \; preset_p6 set name 0.5 \; preset_p7 set name 0.5 \; preset_p8
+set name 0.5 \; preset_p9 set name 0.5 \; preset_p10 set name 0.5;
+#X text 1078 144 This can be another preset;
+#X obj 68 89 r preset_p1;
+#X msg 840 173 \; preset_p1 set name1 0.5 \; preset_p2 set name2 0.5
+\; preset_p3 set name3 0.5 \; preset_p4 set name4 0.5 \; preset_p5
+set name5 0.5 \; preset_p6 set name6 0.5 \; preset_p7 set name7 0.5
+\; preset_p8 set name8 0.5 \; preset_p9 set name9 0.5 \; preset_p10
+set name10 0.5;
+#N canvas 279 613 1401 386 pd_pulp_presets 0;
+#X obj 15 118 s pdpulp_p1;
+#X obj 105 118 s pdpulp_p2;
+#X obj 195 118 s pdpulp_p3;
+#X obj 285 118 s pdpulp_p4;
+#X obj 375 118 s pdpulp_p5;
+#X obj 15 263 s pdpulp_p6;
+#X obj 105 263 s pdpulp_p7;
+#X obj 195 263 s pdpulp_p8;
+#X obj 285 263 s pdpulp_9;
+#X obj 375 263 s pdpulp_p10;
+#X obj 505 97 loadbang;
+#X obj 15 52 t b a;
+#X obj 105 52 t b a;
+#X msg 15 86 name1 0.5;
+#X msg 105 86 name2 0.5;
+#X obj 105 28 r preset_p2;
+#X obj 195 52 t b a;
+#X obj 285 52 t b a;
+#X msg 195 86 name3 0.5;
+#X msg 285 86 name4 0.5;
+#X obj 375 52 t b a;
+#X msg 375 86 name5 0.5;
+#X obj 15 199 t b a;
+#X obj 105 199 t b a;
+#X msg 15 233 name6 0.5;
+#X msg 105 233 name7 0.5;
+#X obj 195 199 t b a;
+#X obj 285 199 t b a;
+#X msg 195 233 name8 0.5;
+#X msg 285 233 name9 0.5;
+#X obj 375 199 t b a;
+#X msg 375 233 4_name10 0.5;
+#X obj 195 28 r preset_p3;
+#X obj 285 28 r preset_p4;
+#X obj 375 28 r preset_p5;
+#X obj 15 175 r preset_p6;
+#X obj 105 175 r preset_p7;
+#X obj 195 175 r preset_p8;
+#X obj 285 175 r preset_p9;
+#X obj 375 175 r preset_p10;
+#X obj 15 28 r preset_p1;
+#X obj 702 68 select 0 1 2 3;
+#X obj 702 42 inlet;
+#X text 504 292 Initial values at startup;
+#X msg 1155 127 \; preset_p1 set name1 0.5 \; preset_p2 set name2 0.5
+\; preset_p3 set name3 0.5 \; preset_p4 set name4 0.5 \; preset_p5
+set name5 0.5 \; preset_p6 set name6 0.5 \; preset_p7 set name7 0.5
+\; preset_p8 set name8 0.5 \; preset_p9 set name9 0.5 \; preset_p10
+set name10 0.5;
+#X msg 945 127 \; preset_p1 set name1 0.5 \; preset_p2 set name2 0.5
+\; preset_p3 set name3 0.5 \; preset_p4 set name4 0.5 \; preset_p5
+set name5 0.5 \; preset_p6 set name6 0.5 \; preset_p7 set name7 0.5
+\; preset_p8 set name8 0.5 \; preset_p9 set name9 0.5 \; preset_p10
+set name10 0.5;
+#X msg 726 127 \; preset_p1 set name1 0.5 \; preset_p2 set name2 0.5
+\; preset_p3 set name3 0.5 \; preset_p4 set name4 0.5 \; preset_p5
+set name5 0.5 \; preset_p6 set name6 0.5 \; preset_p7 set name7 0.5
+\; preset_p8 set name8 0.5 \; preset_p9 set name9 0.5 \; preset_p10
+set name10 0.5;
+#X msg 505 126 \; preset_p1 set name1 0.5 \; preset_p2 set name2 0.5
+\; preset_p3 set name3 0.5 \; preset_p4 set name4 0.5 \; preset_p5
+set name5 0.5 \; preset_p6 set name6 0.5 \; preset_p7 set name7 0.5
+\; preset_p8 set name8 0.5 \; preset_p9 set name9 0.5 \; preset_p10
+set name10 0.5;
+#X connect 10 0 47 0;
+#X connect 11 0 13 0;
+#X connect 11 1 13 0;
+#X connect 12 0 14 0;
+#X connect 12 1 14 0;
+#X connect 13 0 0 0;
+#X connect 14 0 1 0;
+#X connect 15 0 12 0;
+#X connect 16 0 18 0;
+#X connect 16 1 18 0;
+#X connect 17 0 19 0;
+#X connect 17 1 19 0;
+#X connect 18 0 2 0;
+#X connect 19 0 3 0;
+#X connect 20 0 21 0;
+#X connect 20 1 21 0;
+#X connect 21 0 4 0;
+#X connect 22 0 24 0;
+#X connect 22 1 24 0;
+#X connect 23 0 25 0;
+#X connect 23 1 25 0;
+#X connect 24 0 5 0;
+#X connect 25 0 6 0;
+#X connect 26 0 28 0;
+#X connect 26 1 28 0;
+#X connect 27 0 29 0;
+#X connect 27 1 29 0;
+#X connect 28 0 7 0;
+#X connect 29 0 8 0;
+#X connect 30 0 31 0;
+#X connect 30 1 31 0;
+#X connect 31 0 9 0;
+#X connect 32 0 16 0;
+#X connect 33 0 17 0;
+#X connect 34 0 20 0;
+#X connect 35 0 22 0;
+#X connect 36 0 23 0;
+#X connect 37 0 26 0;
+#X connect 38 0 27 0;
+#X connect 39 0 30 0;
+#X connect 40 0 11 0;
+#X connect 41 0 47 0;
+#X connect 41 1 46 0;
+#X connect 41 2 45 0;
+#X connect 41 3 44 0;
+#X connect 42 0 41 0;
+#X restore 94 570 pd pd_pulp_presets;
+#X obj 94 546 hradio 15 1 0 4 empty empty Presets 0 -8 0 10 -204786
+-1 -1 3;
+#X text 90 501 Copy this abstraction for implementing in other patches:
+;
+#X text 528 88 receiving from preset message box;
+#X text 527 118 craeting a preset message;
+#X text 527 152 show the GUI name and value;
+#X text 528 182 send name and value to Pd pulp GUI;
+#X connect 10 0 46 0;
+#X connect 14 0 16 0;
+#X connect 14 1 16 0;
+#X connect 15 0 17 0;
+#X connect 15 1 17 0;
+#X connect 16 0 0 0;
+#X connect 17 0 1 0;
+#X connect 18 0 15 0;
+#X connect 19 0 21 0;
+#X connect 19 1 21 0;
+#X connect 20 0 22 0;
+#X connect 20 1 22 0;
+#X connect 21 0 2 0;
+#X connect 22 0 3 0;
+#X connect 23 0 24 0;
+#X connect 23 1 24 0;
+#X connect 24 0 4 0;
+#X connect 25 0 27 0;
+#X connect 25 1 27 0;
+#X connect 26 0 28 0;
+#X connect 26 1 28 0;
+#X connect 27 0 5 0;
+#X connect 28 0 6 0;
+#X connect 29 0 31 0;
+#X connect 29 1 31 0;
+#X connect 30 0 32 0;
+#X connect 30 1 32 0;
+#X connect 31 0 7 0;
+#X connect 32 0 8 0;
+#X connect 33 0 34 0;
+#X connect 33 1 34 0;
+#X connect 34 0 9 0;
+#X connect 35 0 19 0;
+#X connect 36 0 20 0;
+#X connect 37 0 23 0;
+#X connect 38 0 25 0;
+#X connect 39 0 26 0;
+#X connect 40 0 29 0;
+#X connect 41 0 30 0;
+#X connect 42 0 33 0;
+#X connect 45 0 14 0;
+#X connect 48 0 47 0;
