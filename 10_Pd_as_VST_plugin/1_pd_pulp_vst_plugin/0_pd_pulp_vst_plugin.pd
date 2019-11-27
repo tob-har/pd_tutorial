@@ -1,0 +1,28 @@
+#N canvas 885 369 527 659 12;
+#X text 24 106 Pd Puld VST Plugin Building;
+#X obj 27 138 adc~;
+#X obj 27 170 dac~;
+#X text 77 139 Sound Input;
+#X text 77 171 Sound Output;
+#X text 23 233 Control up to 10 parametser from Pd Pulp GUI. Set a
+receive for every parameter:;
+#X obj 88 303 r feedback;
+#X obj 178 303 r function_3;
+#X text 278 306 ... etc.;
+#X text 27 369 Store init values \, handle presets and define GUI controller
+names by sending to the corresüodning Pd Pulp controller:;
+#X obj 26 302 r delay;
+#X msg 37 436 delay 0.5;
+#X obj 37 470 s pdpupl_p1;
+#X msg 127 436 feedback 0.8;
+#X obj 127 470 s pdpupl_p2;
+#X msg 237 436 function_3 1;
+#X obj 237 470 s pdpupl_p3;
+#X text 348 473 ... etc.;
+#X text 33 542 The store the patch and open via Pd Pulp VST Plugin.
+;
+#X text 221 15 https://github.com/logsol/Pd-Pulp https://github.com/logsol/pd-pulp/releases
+https://github.com/logsol/Pd-Pulp/wiki;
+#X connect 11 0 12 0;
+#X connect 13 0 14 0;
+#X connect 15 0 16 0;
