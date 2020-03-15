@@ -1,4 +1,4 @@
-#N canvas 4 23 435 672 10;
+#N canvas 4 23 435 736 10;
 #X obj 68 133 min;
 #X floatatom 68 155 5 0 0 0 - - -;
 #X floatatom 24 87 5 0 0 0 - - -;
@@ -43,6 +43,10 @@
 #X obj 118 543 max;
 #X text 22 48 Smallest of all numbers;
 #X text 41 378 Largest of all numbers;
+#X text 33 637 ... can also be done way much more comfortable with:
+;
+#X obj 31 689 array max;
+#X obj 32 666 array min;
 #X connect 0 0 1 0;
 #X connect 1 0 20 0;
 #X connect 2 0 0 0;

@@ -1,0 +1,27 @@
+#N canvas 291 111 747 492 10;
+#X obj 12 14 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0 1
+;
+#X msg 12 33 \; pd dsp \$1;
+#X obj 13 338 dac~;
+#X obj 13 306 *~ 0.3;
+#X floatatom 71 286 5 0 0 0 - - -;
+#X obj 13 243 tabosc4~;
+#X floatatom 13 75 5 0 0 0 - - -;
+#X obj 13 92 sig~ 220;
+#X text 194 75 Tabosc4~ needs table-length x^2+3;
+#X msg 64 200 set cos;
+#X obj 197 101 table cos 515;
+#X msg 197 199 \; cos cosinesum 515 0 1;
+#X msg 197 229 \; cos cosinesum 515 0 0.5;
+#X msg 398 229 \; cos cosinesum 515 0 0.5 \; cos normalize 1;
+#X msg 198 270 \; cos cosinesum 515 -0.5 0.5 1 1;
+#X msg 398 270 \; cos cosinesum 515 -0.5 0.5 1 1 \; cos normalize 1
+;
+#X connect 0 0 1 0;
+#X connect 3 0 2 0;
+#X connect 3 0 2 1;
+#X connect 4 0 3 1;
+#X connect 5 0 3 0;
+#X connect 6 0 7 0;
+#X connect 7 0 5 0;
+#X connect 9 0 5 0;
