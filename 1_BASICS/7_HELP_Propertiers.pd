@@ -1,0 +1,8 @@
+#N canvas 67 26 597 378 10;
+#X obj 91 149;
+#X obj 90 189 int;
+#X floatatom 91 224 5 0 0 0 - - -;
+#X symbolatom 91 257 10 0 0 0 - - -;
+#X text 40 97 Right click on every object offers help and gains access
+to further propertiers:;
+#X obj 19 16 ../pd_tutorial_header;

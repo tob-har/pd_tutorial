@@ -1,49 +1,50 @@
-#N canvas 526 23 624 755 10;
-#X text 33 34 We already got to know lists. Now its time to pack and
+#N canvas 526 23 624 863 10;
+#X text 33 104 We already got to know lists. Now its time to pack and
 unpack them:;
-#X obj 48 200 pack float float float;
-#X floatatom 48 176 5 0 0 0 - - -, f 5;
-#X floatatom 123 176 5 0 0 0 - - -, f 5;
-#X floatatom 199 175 5 0 0 0 - - -, f 5;
-#X obj 48 225 print;
-#X text 35 92 1) How the [pack] object works Pack collects arguments
+#X obj 48 270 pack float float float;
+#X floatatom 48 246 5 0 0 0 - - -;
+#X floatatom 123 246 5 0 0 0 - - -;
+#X floatatom 199 245 5 0 0 0 - - -;
+#X obj 48 295 print;
+#X text 35 162 1) How the [pack] object works Pack collects arguments
 \, floats or symbols \, stores them \, and outputs them as a list when
 its hot inlet ist triggered! Every creation argument generates a corresponding
 inlet. The creation argument must define if the incoming message is
 a float (f) or symbol (s):;
-#X text 242 175 Note: Only the hot inlet triggers the output!;
-#X obj 48 310 pack float float float;
-#X floatatom 48 266 5 0 0 0 - - -, f 5;
-#X floatatom 112 266 5 0 0 0 - - -, f 5;
-#X floatatom 177 265 5 0 0 0 - - -, f 5;
-#X obj 48 335 print;
-#X obj 112 285 t b f;
-#X obj 177 285 t b f;
-#X text 232 285 The [trigger] object can used to output a list at every
+#X text 242 245 Note: Only the hot inlet triggers the output!;
+#X obj 48 380 pack float float float;
+#X floatatom 48 336 5 0 0 0 - - -;
+#X floatatom 112 336 5 0 0 0 - - -;
+#X floatatom 177 335 5 0 0 0 - - -;
+#X obj 48 405 print;
+#X obj 112 355 t b f;
+#X obj 177 355 t b f;
+#X text 232 355 The [trigger] object can used to output a list at every
 new input!;
-#X text 40 384 2) Symbols as creation arguments;
-#X obj 48 524 pack symbol symbol symbol;
-#X msg 48 459 symbol hello;
-#X obj 48 547 print;
-#X obj 48 435 t b b b;
-#X obj 48 413 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+#X text 40 454 2) Symbols as creation arguments;
+#X obj 48 594 pack symbol symbol symbol;
+#X msg 48 529 symbol hello;
+#X obj 48 617 print;
+#X obj 48 505 t b b b;
+#X obj 48 483 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
 -1;
-#X msg 121 481 symbol world;
-#X msg 195 501 symbol !;
-#X obj 50 661 pack f 3 f s;
-#X floatatom 50 633 5 0 0 0 - - -, f 5;
-#X floatatom 90 633 5 0 0 0 - - -, f 5;
-#X floatatom 131 633 5 0 0 0 - - -, f 5;
-#X symbolatom 171 633 10 0 0 0 - - -, f 10;
-#X obj 50 687 print floatsandsymbols;
-#X text 231 663 Float and symbol can be used in short as f and s. Every
+#X msg 121 551 symbol world;
+#X msg 195 571 symbol !;
+#X obj 50 731 pack f 3 f s;
+#X floatatom 50 703 5 0 0 0 - - -;
+#X floatatom 90 703 5 0 0 0 - - -;
+#X floatatom 131 703 5 0 0 0 - - -;
+#X symbolatom 171 703 10 0 0 0 - - -;
+#X obj 50 757 print floatsandsymbols;
+#X text 231 733 Float and symbol can be used in short as f and s. Every
 float creation argument will be put as it is in the list \, until its
 input receives a new message!;
-#X obj 23 174 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+#X obj 23 244 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
 -1;
-#X text 40 595 3) Symbols as creation arguments;
-#X obj 25 631 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+#X text 40 665 3) Symbols as creation arguments;
+#X obj 25 701 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
 -1;
+#X obj 19 16 ../pd_tutorial_header;
 #X connect 1 0 5 0;
 #X connect 2 0 1 0;
 #X connect 3 0 1 1;

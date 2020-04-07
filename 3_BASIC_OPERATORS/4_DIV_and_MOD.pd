@@ -1,0 +1,84 @@
+#N canvas 576 23 673 797 10;
+#X msg 104 263 2;
+#X msg 72 263 8;
+#X obj 72 230 t b b;
+#X obj 72 209 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X obj 72 288 div;
+#X floatatom 72 313 5 0 0 0 - - -;
+#X msg 184 263 2;
+#X msg 152 263 8;
+#X floatatom 152 313 5 0 0 0 - - -;
+#X obj 152 288 /;
+#X text 222 288 div and / give the same result \, hence it is 8 / 2
+= 4 with the raiminder 0;
+#X msg 72 413 8;
+#X obj 72 380 t b b;
+#X obj 72 359 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X obj 72 438 div;
+#X floatatom 72 463 5 0 0 0 - - -;
+#X msg 152 413 8;
+#X floatatom 152 463 5 0 0 0 - - -;
+#X obj 152 438 /;
+#X msg 104 413 3;
+#X msg 184 413 3;
+#X text 224 438 Here we get the result without remainder by div and
+a float result by using /;
+#X msg 104 638 2;
+#X msg 72 638 8;
+#X obj 72 605 t b b;
+#X obj 72 584 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X floatatom 72 688 5 0 0 0 - - -;
+#X obj 72 663 mod;
+#X msg 253 638 8;
+#X floatatom 253 688 5 0 0 0 - - -;
+#X obj 253 663 mod;
+#X msg 285 638 3;
+#X text 71 707 8 / 2 leaves no remainder;
+#X text 252 706 8 / 3 leaves a remainder of 2;
+#X text 72 93 Lets have a closer look on division. Although the "/"
+object will be useful for plentey of divisions \, there are two more
+important kinds of division: The division with whole numbers N \, called
+"div" and the modulo operation "mod" to determin a divisions remainder.
+;
+#X text 71 169 1) [div] devides two numbers and outputs the divisions
+result without remainder! The default argument is 1;
+#X text 67 531 2) [mod] will create a number at its outlet \, which
+is the remeinder of a division fed to its inlets. This operation is
+called modulo. Its initial argument is 1;
+#X obj 19 16 ../pd_tutorial_header;
+#X connect 0 0 4 1;
+#X connect 1 0 4 0;
+#X connect 2 0 1 0;
+#X connect 2 0 7 0;
+#X connect 2 1 0 0;
+#X connect 2 1 6 0;
+#X connect 3 0 2 0;
+#X connect 4 0 5 0;
+#X connect 6 0 9 1;
+#X connect 7 0 9 0;
+#X connect 9 0 8 0;
+#X connect 11 0 14 0;
+#X connect 12 0 11 0;
+#X connect 12 0 16 0;
+#X connect 12 1 19 0;
+#X connect 12 1 20 0;
+#X connect 13 0 12 0;
+#X connect 14 0 15 0;
+#X connect 16 0 18 0;
+#X connect 18 0 17 0;
+#X connect 19 0 14 1;
+#X connect 20 0 18 1;
+#X connect 22 0 27 1;
+#X connect 23 0 27 0;
+#X connect 24 0 23 0;
+#X connect 24 0 28 0;
+#X connect 24 1 22 0;
+#X connect 24 1 31 0;
+#X connect 25 0 24 0;
+#X connect 27 0 26 0;
+#X connect 28 0 30 0;
+#X connect 30 0 29 0;
+#X connect 31 0 30 1;

@@ -1,0 +1,8 @@
+#N canvas 387 502 559 392 10;
+#X text 62 89 Every patcher can either be in live or edit mode. In
+live mode \, the patch is running and you can can control user interface
+objects in your patcher window. In edit mode \, the patch can be edited
+\, objects created \, moved \, connected \, etc.;
+#X text 64 184 Toggle between live and edit mode by hitting [cmd +
+e] or [strg + e];
+#X obj 19 16 ../pd_tutorial_header;

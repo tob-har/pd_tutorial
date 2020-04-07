@@ -1,0 +1,40 @@
+#N canvas 140 29 599 636 10;
+#X text 60 100 GUI - Graphical User Interface;
+#X text 60 133 Many Objects can be replaced by handy GUIs.;
+#X obj 63 165 bang;
+#X text 102 166 =;
+#X obj 123 166 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X text 64 211 Here are some more important GUI Objects \, found in
+the Put Menu:;
+#X obj 68 258 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X text 152 252 TOGGLE behaves like an ON/OFF switch (just click it)
+It sends 0 and 1 messages;
+#X floatatom 68 289 5 0 0 0 - - -;
+#X obj 70 384 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 111 460 tgl 30 0 empty empty empty 17 7 0 10 -262144 -4160 -1
+0 1;
+#X obj 106 386 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X msg 140 383 1;
+#X msg 164 412 0;
+#X floatatom 111 532 5 0 0 0 - - -;
+#X obj 89 532 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 149 531 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X text 144 166 =;
+#X obj 163 165 b;
+#X text 217 381 ever non zero number is toggle on;
+#X text 219 411 0 message is toogle off;
+#X obj 19 16 ../pd_tutorial_header;
+#X connect 6 0 8 0;
+#X connect 9 0 10 0;
+#X connect 10 0 14 0;
+#X connect 10 0 15 0;
+#X connect 10 0 16 0;
+#X connect 11 0 10 0;
+#X connect 12 0 10 0;
+#X connect 13 0 10 0;

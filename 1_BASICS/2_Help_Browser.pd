@@ -1,0 +1,16 @@
+#N canvas 304 121 612 524 10;
+#X text 55 114 1 Your best Friends:;
+#X text 55 114 1 Your best Friends:;
+#X text 59 255 2 Why is this important?;
+#X text 104 396 OK... lets finally start...;
+#X text 107 143 [cmd + B] or in the menu: help -> Patch browser...
+;
+#X text 109 171 Right click an object \, select help for shwoing a
+help file.;
+#X text 111 199 Take a look in the www for answers to your questions.
+Pd has a large supportive community.;
+#X text 111 291 Pd is open source and permanently under evelopement.
+There are so may objects \, that it is hard to remember every single
+function of them. So start a routine to always browse for everything
+you need.;
+#X obj 19 16 ../pd_tutorial_header;

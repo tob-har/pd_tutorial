@@ -1,27 +1,28 @@
-#N canvas 198 88 695 652 10;
-#X text 67 146 click: Put --> Object;
-#X obj 367 166;
-#X text 68 168 click an place empty object in the patcher:;
-#X obj 429 210;
-#X text 282 211 place a second object;
-#X text 370 248 or a third one:;
-#X obj 477 247;
-#X text 259 273 (remeber the HELP: right click on a empty object -->
+#N canvas 198 88 695 720 10;
+#X text 67 216 click: Put --> Object;
+#X obj 367 236;
+#X text 68 238 click an place empty object in the patcher:;
+#X obj 429 280;
+#X text 282 281 place a second object;
+#X text 370 318 or a third one:;
+#X obj 477 317;
+#X text 259 343 (remeber the HELP: right click on a empty object -->
 help);
-#X text 79 359 Put --> Comment creates a text file that is only a help
+#X text 79 429 Put --> Comment creates a text file that is only a help
 within the patcher and has NO EFFECT on the running patch.;
-#X obj 82 417;
-#X text 127 411 Type a command into an empty OBJECT box to make the
+#X obj 82 487;
+#X text 127 481 Type a command into an empty OBJECT box to make the
 obeject behave in a certain way.;
-#X text 270 500 Place some empty object boxes and comments on the canvas...
+#X text 270 570 Place some empty object boxes and comments on the canvas...
 This can already by somehow nice.;
-#X obj 318 544;
-#X obj 358 544;
-#X text 320 574 #########;
-#X text 328 548 0;
-#X text 359 549 0;
-#X text 28 34 In Pd we create patches by connecting [objects] with
+#X obj 318 614;
+#X obj 358 614;
+#X text 320 644 #########;
+#X text 328 618 0;
+#X text 359 619 0;
+#X text 28 104 In Pd we create patches by connecting [objects] with
 patchchords.;
-#X text 29 67 [objects] are placed within the patcher window.;
-#X text 33 121 1 Placing obects via the menu;
-#X text 35 326 2 We now know objects and commets;
+#X text 29 137 [objects] are placed within the patcher window.;
+#X text 33 191 1 Placing obects via the menu;
+#X text 35 396 2 We now know objects and commets;
+#X obj 19 16 ../pd_tutorial_header;

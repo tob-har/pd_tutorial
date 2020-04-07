@@ -1,36 +1,37 @@
-#N canvas 545 72 773 770 10;
-#X text 30 35 Lets understand MESSAGES;
-#X text 34 127 Here we go:;
-#X obj 87 207 print;
-#X msg 87 172 one;
-#X text 220 170 MESSAGE of one ELEMENT;
-#X obj 87 278 print;
-#X msg 87 249 one two three;
-#X obj 110 402 print;
-#X msg 96 345 1;
-#X msg 73 321 0;
-#X msg 154 344 stop;
-#X msg 137 320 start;
-#X text 228 318 NUMBERS and SYMBOLS (note: many OUTLETS can be connectet
+#N canvas 545 72 773 849 10;
+#X text 30 105 Lets understand MESSAGES;
+#X text 34 197 Here we go:;
+#X obj 87 277 print;
+#X msg 87 242 one;
+#X text 220 240 MESSAGE of one ELEMENT;
+#X obj 87 348 print;
+#X msg 87 319 one two three;
+#X obj 110 472 print;
+#X msg 96 415 1;
+#X msg 73 391 0;
+#X msg 154 414 stop;
+#X msg 137 390 start;
+#X text 228 388 NUMBERS and SYMBOLS (note: many OUTLETS can be connectet
 to one INLET);
-#X msg 75 475 1 2 3 4 5;
-#X obj 87 684 print;
-#X msg 107 517 1 \, 2 \, 3 \, 4 \, 5;
-#X text 231 468 one MESSAGE with five ELEMENTS;
-#X text 228 517 five MESSAGES with one ELEMENT thanks to comma seperation
+#X msg 75 545 1 2 3 4 5;
+#X obj 87 754 print;
+#X msg 107 587 1 \, 2 \, 3 \, 4 \, 5;
+#X text 231 538 one MESSAGE with five ELEMENTS;
+#X text 228 587 five MESSAGES with one ELEMENT thanks to comma seperation
 ;
-#X text 297 571 one MESSAGE with NUMBERS and SYMBOLS as ELEMENTS;
-#X msg 132 570 1 2 3 hello 4 5 6 world;
-#X msg 168 621 1 \, 2 \, hello \, world \, 3 \, 4;
-#X text 31 70 In Pd every information is send as a MESSAGE. A MESSAGE
+#X text 297 641 one MESSAGE with NUMBERS and SYMBOLS as ELEMENTS;
+#X msg 132 640 1 2 3 hello 4 5 6 world;
+#X msg 168 691 1 \, 2 \, hello \, world \, 3 \, 4;
+#X text 31 140 In Pd every information is send as a MESSAGE. A MESSAGE
 consits of its atoms. Those ELEMENTS can only by NUMBERS or SYMBOLS
 ;
-#X msg 277 385 1;
-#X obj 280 427 print;
-#X floatatom 383 393 5 0 0 0 - - -, f 5;
-#X msg 383 363 2;
-#X text 220 248 MESSAGE of three ELEMENTS \, aka LIST;
-#X msg 319 383 word;
+#X msg 277 455 1;
+#X obj 280 497 print;
+#X floatatom 383 463 5 0 0 0 - - -;
+#X msg 383 433 2;
+#X text 220 318 MESSAGE of three ELEMENTS \, aka LIST;
+#X msg 319 453 word;
+#X obj 19 16 ../pd_tutorial_header;
 #X connect 3 0 2 0;
 #X connect 6 0 5 0;
 #X connect 8 0 7 0;

@@ -1,38 +1,40 @@
-#N canvas 168 126 599 566 10;
-#X obj 46 260 metro 1000;
-#X obj 46 294 bng 15 50 10 0 empty empty empty 17 7 0 10 -262144 -1
+#N canvas 168 126 599 673 10;
+#X obj 46 340 metro 1000;
+#X obj 46 374 bng 15 50 10 0 empty empty empty 17 7 0 10 -262144 -1
 -1;
-#X obj 46 125 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+#X obj 46 205 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
 1;
-#X text 137 258 The Argument sets the metro rate in milliseconds;
-#X msg 76 126 0;
-#X msg 85 151 1;
-#X text 137 121 zero stops metro;
-#X text 138 149 non zero start metro;
-#X msg 101 174 stop;
-#X msg 107 219 100;
-#X floatatom 153 218 5 0 0 0 - - -, f 5;
-#X text 215 212 right inlet sets argument;
-#X obj 50 451 delay 1000;
-#X obj 50 394 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+#X msg 76 206 0;
+#X msg 85 231 1;
+#X text 137 201 zero stops metro;
+#X text 138 229 non zero start metro;
+#X msg 101 254 stop;
+#X msg 107 299 100;
+#X floatatom 153 298 5 0 0 0 - - -;
+#X obj 50 541 delay 1000;
+#X obj 50 484 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
 -1;
-#X obj 50 485 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+#X obj 50 575 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
 -1;
-#X msg 123 390 100;
-#X floatatom 134 415 5 0 0 0 - - -, f 5;
-#X text 37 32 Remeber the bang? There are two more important objects
+#X msg 123 480 100;
+#X floatatom 134 505 5 0 0 0 - - -;
+#X text 37 112 Remeber the bang? There are two more important objects
 to control trigger and timing: The METRO objects sends out bangs in
 millisecends:;
-#X text 45 359 The DELAY Object outputs ONE bang at the given ms value:
-;
+#X text 128 341 The Argument sets metro's rate in milliseconds;
+#X text 197 297 right inlet sets argument \, the rate at which metro
+sends out bangs;
+#X text 45 439 The DELAY Object outputs ONE bang after the given milliseconds
+have passed:;
+#X obj 19 16 ../pd_tutorial_header;
 #X connect 0 0 1 0;
 #X connect 2 0 0 0;
+#X connect 3 0 0 0;
 #X connect 4 0 0 0;
-#X connect 5 0 0 0;
-#X connect 8 0 0 0;
+#X connect 7 0 0 0;
+#X connect 8 0 0 1;
 #X connect 9 0 0 1;
-#X connect 10 0 0 1;
-#X connect 12 0 14 0;
-#X connect 13 0 12 0;
-#X connect 15 0 12 1;
-#X connect 16 0 12 1;
+#X connect 10 0 12 0;
+#X connect 11 0 10 0;
+#X connect 13 0 10 1;
+#X connect 14 0 10 1;

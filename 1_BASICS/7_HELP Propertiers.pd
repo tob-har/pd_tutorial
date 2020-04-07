@@ -1,7 +1,0 @@
-#N canvas 67 26 597 378 10;
-#X obj 91 89;
-#X obj 90 129 int;
-#X floatatom 91 164 5 0 0 0 - - -;
-#X symbolatom 91 197 10 0 0 0 - - -;
-#X text 40 37 1 Right Click on every Object offers help and gains access
-to further propertiers:;

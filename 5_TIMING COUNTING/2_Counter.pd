@@ -1,48 +1,50 @@
 #N canvas 536 82 590 899 10;
-#X text 29 34 In a lot of cases it is curtial to count! Lets use the
+#X text 59 94 In a lot of cases it is curtial to count! Lets use the
 BPM metronome as a bang source so we can count the bangs.;
-#X obj 108 336 + 1;
-#X floatatom 60 362 5 0 0 0 - - -, f 5;
-#X msg 117 299 0;
-#X text 167 364 Counting up on every beat.;
-#X text 144 300 Resets the counter.;
-#X obj 63 548 +;
-#X floatatom 63 571 5 0 0 0 - - -, f 5;
-#X msg 46 472 1;
-#X msg 63 496 -1;
-#X msg 94 520 0;
-#X text 75 471 increment;
-#X text 92 495 decrement;
-#X text 124 518 reset counter;
-#X obj 58 619 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+#X obj 135 356 + 1;
+#X floatatom 87 382 5 0 0 0 - - -;
+#X msg 187 319 0;
+#X text 197 384 Counting up on every beat.;
+#X text 214 320 Resets the counter.;
+#X obj 93 568 +;
+#X floatatom 93 591 5 0 0 0 - - -;
+#X msg 76 492 1;
+#X msg 93 516 -1;
+#X msg 124 540 0;
+#X text 105 491 increment;
+#X text 122 515 decrement;
+#X text 154 538 reset counter;
+#X obj 88 709 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
 -1;
-#X msg 99 618 0;
-#X text 27 423 Two more typical counters:;
-#X floatatom 58 679 5 0 0 0 - - -, f 5;
-#X obj 94 548 f;
-#X obj 58 655 f;
-#X obj 58 722 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
--1;
-#X msg 99 721 0;
-#X floatatom 58 782 5 0 0 0 - - -, f 5;
-#X obj 58 758 f;
-#X text 128 721 instant reset;
-#X text 129 618 reset on next bang;
-#X obj 99 655 + 1;
-#X obj 99 758 + 1;
-#X msg 84 217 60000 \$1;
-#X floatatom 84 186 5 0 0 0 - - -, f 5;
-#X obj 84 238 div;
-#X obj 57 280 metro;
-#X obj 57 186 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+#X msg 129 708 0;
+#X text 57 443 Two more typical counters:;
+#X floatatom 88 769 5 0 0 0 - - -;
+#X obj 124 568 f;
+#X obj 88 745 f;
+#X obj 318 708 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X msg 359 707 0;
+#X floatatom 318 768 5 0 0 0 - - -;
+#X obj 318 744 f;
+#X text 388 707 instant reset;
+#X text 159 708 reset on next bang;
+#X obj 129 745 + 1;
+#X obj 359 744 + 1;
+#X msg 114 237 60000 \$1;
+#X floatatom 114 206 5 0 0 0 - - -;
+#X obj 114 258 div;
+#X obj 87 300 metro;
+#X obj 87 206 tgl 15 0 empty empty empty 17 7 0 10 -228856 -1 -1 0
 1;
-#X text 119 186 BPM;
-#X obj 60 338 f;
-#X msg 84 156 60;
-#X obj 84 134 loadbang;
-#X floatatom 84 259 5 0 0 0 - - -, f 5;
-#X obj 21 311 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+#X text 149 206 BPM;
+#X obj 87 358 f;
+#X msg 114 176 60;
+#X obj 114 154 loadbang;
+#X floatatom 114 279 5 0 0 0 - - -;
+#X obj 51 331 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
 -1;
+#X obj 19 16 ../pd_tutorial_header;
+#X text 85 671 How to reset a counter:;
 #X connect 1 0 34 1;
 #X connect 3 0 34 1;
 #X connect 6 0 7 0;

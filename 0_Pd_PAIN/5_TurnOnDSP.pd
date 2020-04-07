@@ -1,0 +1,19 @@
+#N canvas 221 239 721 489 10;
+#X msg 69 164 \; pd dsp 1;
+#X obj 69 140 loadbang;
+#X msg 78 295 \; pd dsp \$1;
+#X obj 78 272 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X text 68 88 With this little snipped (those are called idioms) you
+can turn on the Digital Signal Processing (DSP) on startup. This is
+necessary for Pd to process Audio (digital signals);
+#X text 99 271 CLICK THIS BOX;
+#X text 75 249 ... or turn it on and off manually within the little
+patch:;
+#X text 302 399 ... don't worry \, all the details in this patch will
+be talked about. But keep in mind \, that copy-paste is your friend
+and you can always copy patches or parts of a patch from one patcher
+to another.;
+#X obj 19 16 ../pd_tutorial_header;
+#X connect 1 0 0 0;
+#X connect 3 0 2 0;

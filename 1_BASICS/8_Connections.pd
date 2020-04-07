@@ -1,19 +1,20 @@
-#N canvas 382 54 630 404 10;
-#X floatatom 48 169 5 0 0 0 - - -, f 5;
-#X msg 48 71 1;
-#X msg 90 71 2;
-#X msg 130 70 3;
-#X msg 185 97 hello;
-#X text 261 67 send number message to a number box;
-#X text 261 96 symbol (string) does not work!;
-#X floatatom 48 205 5 0 0 0 - - -, f 5;
-#X msg 45 256 set 48;
-#X floatatom 45 285 5 0 0 0 - - -, f 5;
-#X floatatom 45 313 5 0 0 0 - - -, f 5;
-#X text 264 254 [set # ] sends the value \, but DOES NOT output;
-#X text 46 19 Basic connection principles;
-#X text 264 155 Receiving a number \, sets the number box to the specific
+#N canvas 382 54 630 521 10;
+#X floatatom 48 259 5 0 0 0 - - -;
+#X msg 48 161 1;
+#X msg 90 161 2;
+#X msg 130 160 3;
+#X msg 185 207 hello;
+#X text 261 157 send number message to a number box;
+#X text 261 206 symbol (string) does not work!;
+#X floatatom 48 295 5 0 0 0 - - -;
+#X msg 45 346 set 48;
+#X floatatom 45 375 5 0 0 0 - - -;
+#X floatatom 45 403 5 0 0 0 - - -;
+#X text 46 109 Basic connection principles;
+#X text 264 255 Receiving a number \, sets the number box to the specific
 value AND outputs the value!;
+#X text 264 344 [set #] sends the value \, but DOES NOT output;
+#X obj 19 16 ../pd_tutorial_header;
 #X connect 0 0 7 0;
 #X connect 1 0 0 0;
 #X connect 2 0 0 0;

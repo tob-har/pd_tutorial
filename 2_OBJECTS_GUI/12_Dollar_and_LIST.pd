@@ -1,0 +1,55 @@
+#N canvas 282 23 631 931 10;
+#X text 53 105 Lets combine the $ variable with lists:;
+#X text 52 137 1) The number of a $ sign corresponds to the number
+of the position of an atom in a list:;
+#X msg 163 251 \$3;
+#X floatatom 163 278 5 0 0 0 - - -;
+#X msg 54 347 \$5;
+#X floatatom 54 374 5 0 0 0 - - -;
+#X msg 147 189 8 9 10 11 12.34;
+#X text 216 245 The 3rd element of a list is read out. (remember \,
+that when working with floats only \, there is no need for a selector!)
+;
+#X text 129 346 The 5th element of a list is read out. BUT $ DOES NOT
+STORE the value. By clicking the bang \, you get an error message and
+$ will output a 0 value.;
+#X msg 56 533 \$2;
+#X obj 56 564 print;
+#X text 249 454 When working with symbol atoms \, the first string
+is interpretet as a selecotr. Therefore the second element in this
+list will be "like".;
+#X msg 76 504 list this works very well;
+#X msg 56 458 this works very confusing;
+#X text 261 506 Giving the selector "list" makes everything less confusing!
+;
+#X text 53 421 2) $ sing and string atoms;
+#X text 53 600 3) $ sign variabels can be a list on their own;
+#X msg 56 665 \$2 \$3 \$4;
+#X obj 56 693 print;
+#X obj 288 693 print;
+#X msg 288 665 \$4 \$3 \$2;
+#X msg 56 635 3 4 6 8 9;
+#X msg 288 635 3 4 6 8 9;
+#X text 139 665 Used as selector;
+#X text 364 665 Used to rearragne;
+#X obj 56 810 print;
+#X msg 56 752 3 4 6 8 9;
+#X msg 56 782 I like \$2 four beats;
+#X text 207 781 Used to select and filled in a list;
+#X msg 54 189 2 3 4 5 6 7;
+#X obj 19 16 ../pd_tutorial_header;
+#X connect 2 0 3 0;
+#X connect 4 0 5 0;
+#X connect 6 0 4 0;
+#X connect 6 0 2 0;
+#X connect 9 0 10 0;
+#X connect 12 0 9 0;
+#X connect 13 0 9 0;
+#X connect 17 0 18 0;
+#X connect 20 0 19 0;
+#X connect 21 0 17 0;
+#X connect 22 0 20 0;
+#X connect 26 0 27 0;
+#X connect 27 0 25 0;
+#X connect 29 0 2 0;
+#X connect 29 0 4 0;

@@ -1,27 +1,29 @@
-#N canvas 411 40 599 566 10;
-#X text 22 8 Atoms... and Syntax;
-#X text 21 39 Messages just represent values and numbers. In some cases
-it is important to know about that. Here comes the geek stuff:;
-#X msg 24 118 5;
-#X msg 22 161 float 5;
-#X text 94 112 The message 5 actually consits of two informations:
+#N canvas 411 40 599 691 10;
+#X text 62 128 Atoms... and Syntax;
+#X text 61 159 Messages just represent values and numbers. In some
+cases it is important to know about that. Here comes the geek stuff:
 ;
-#X text 96 158 The first is the method (selctor) the second the argument(s)
+#X msg 64 238 5;
+#X msg 62 281 float 5;
+#X text 134 232 The message 5 actually consits of two informations:
+;
+#X text 136 278 The first is the method (selctor) the second the argument(s)
 Those parts are called ATOMS.;
-#X msg 105 219 5;
-#X text 219 219 These are the same messages!;
-#X msg 27 282 1 2 3 4 5;
-#X text 135 280 This message is acutally a LIST:;
-#X msg 48 310 list 1 2 3 4 5;
-#X obj 28 341 print;
-#X obj 25 247 print;
-#X text 27 381 An ATOM can only be one of three types: number (float)
+#X msg 145 339 5;
+#X text 259 339 These are the same messages!;
+#X msg 67 402 1 2 3 4 5;
+#X text 175 400 This message is acutally a LIST:;
+#X msg 88 430 list 1 2 3 4 5;
+#X obj 68 461 print;
+#X obj 65 367 print;
+#X text 67 511 An ATOM can only be one of three types: number (float)
 \, symbol (string) or a pointer (an adress).;
-#X msg 30 424 float 5;
-#X text 107 425 So this message consist of: the 1st atom is a symbol
+#X msg 70 554 float 5;
+#X text 147 555 So this message consist of: the 1st atom is a symbol
 with the string value "float" and the 2ns atom is a float with its
 value "5";
-#X msg 25 219 float 5;
+#X msg 65 339 float 5;
+#X obj 19 16 ../pd_tutorial_header;
 #X connect 6 0 12 0;
 #X connect 8 0 11 0;
 #X connect 10 0 11 0;

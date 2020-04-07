@@ -1,17 +1,18 @@
 #N canvas 146 23 581 419 10;
-#X obj 32 116 print list1;
-#X msg 32 84 8 9 10 11 12.34;
-#X msg 35 165 this is a list;
-#X obj 35 200 print list2;
-#X text 150 84 A list containing 5 float atoms;
-#X text 155 165 A list containing 4 string symbols;
-#X msg 35 243 1 am a l1st 2;
-#X obj 35 275 print list3;
-#X text 160 240 Obviously a list with floats and strings.;
-#X text 31 34 Now its time to deal with messages \, that contain more
+#X obj 32 186 print list1;
+#X msg 32 154 8 9 10 11 12.34;
+#X msg 35 235 this is a list;
+#X obj 35 270 print list2;
+#X text 150 154 A list containing 5 float atoms;
+#X text 155 235 A list containing 4 string symbols;
+#X msg 35 313 1 am a l1st 2;
+#X obj 35 345 print list3;
+#X text 160 310 Obviously a list with floats and strings.;
+#X text 31 104 Now its time to deal with messages \, that contain more
 then one value atoms: a [list];
-#X text 150 114 The print object can prepend a label: here [list1]
+#X text 150 184 The print object can prepend a label: here [list1]
 ;
+#X obj 19 16 ../pd_tutorial_header;
 #X connect 1 0 0 0;
 #X connect 2 0 3 0;
 #X connect 6 0 7 0;

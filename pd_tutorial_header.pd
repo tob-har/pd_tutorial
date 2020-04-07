@@ -1,0 +1,4 @@
+#N canvas 0 23 325 152 12;
+#X obj 10 10 cnv 20 200 60 empty empty Pd_Tutorial 5 10 0 12 -228856
+-86277 0;
+#X coords 0 -1 1 1 200 60 2 10 10;

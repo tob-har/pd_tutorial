@@ -1,30 +1,34 @@
-#N canvas 546 292 602 421 10;
-#X text 40 23 HOT and COLD Inlets;
-#X obj 40 127 float 5.123;
-#X floatatom 40 168 5 0 0 0 - - -, f 5;
-#X obj 40 89 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+#N canvas 546 292 602 557 10;
+#X text 50 113 HOT and COLD Inlets;
+#X obj 50 217 float 5.123;
+#X floatatom 50 258 5 0 0 0 - - -;
+#X obj 50 179 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
 -1;
-#X text 168 104 The leftmost inlet is the HOT inlet. Recieved messages
-ALSO trigger the objects action.;
-#X text 169 148 Here \, the bang \, outputs the initial argument.;
-#X obj 43 300 float 5.123;
-#X floatatom 43 356 8 0 0 0 - - -, f 8;
-#X obj 43 225 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+#X obj 53 410 float 5.123;
+#X floatatom 53 466 8 0 0 0 - - -;
+#X obj 53 335 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
 -1;
-#X msg 126 237 -123.456;
-#X msg 145 258 0;
-#X text 204 238 The rightmost inlet is the COLD inlet. Recieved messages
-change the arguments of th object. The objects action IS NOT triggered.
+#X msg 136 347 -123.456;
+#X msg 155 368 0;
+#X floatatom 78 357 5 0 0 0 - - -;
+#X obj 113 444 print;
+#X msg 116 322 300000;
+#X text 178 194 The leftmost inlet is the HOT inlet. Recieved messages
+trigger the objects action.;
+#X text 179 226 Here \, the bang \, outputs the initial [float] argument
+[5.123];
+#X text 214 348 The rightmost inlet is the COLD inlet. Recieved messages
+change the arguments of the object. The objects action IS NOT triggered.
 ;
-#X floatatom 68 247 5 0 0 0 - - -, f 5;
-#X obj 103 334 print;
-#X msg 106 212 300000;
+#X text 215 395 With some objects you have to check the propertiers
+of their inlets! To do so \, have a look at their help file.;
+#X obj 19 16 ../pd_tutorial_header;
 #X connect 1 0 2 0;
 #X connect 3 0 1 0;
-#X connect 6 0 7 0;
-#X connect 6 0 13 0;
-#X connect 8 0 6 0;
-#X connect 9 0 6 1;
-#X connect 10 0 6 1;
-#X connect 12 0 6 1;
-#X connect 14 0 6 1;
+#X connect 4 0 5 0;
+#X connect 4 0 10 0;
+#X connect 6 0 4 0;
+#X connect 7 0 4 1;
+#X connect 8 0 4 1;
+#X connect 9 0 4 1;
+#X connect 11 0 4 1;

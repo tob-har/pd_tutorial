@@ -1,0 +1,65 @@
+#N canvas 372 63 613 783 10;
+#X text 51 90 In Pd \, there are several math objects to choose from.
+Here we will focus on how they work and in which order Pd calculates
+a patch!;
+#X obj 76 174 +;
+#X obj 105 174 -;
+#X obj 134 174 *;
+#X obj 165 174 /;
+#X text 54 150 1) Basic Math Objects;
+#X text 75 220 The RIGHT inlet stores one float for the math operation!
+;
+#X text 76 238 The left inlet fires the equation when recieving a float
+or a bang.;
+#X obj 79 351 + 3;
+#X obj 117 350 - 2;
+#X obj 156 350 * 5.34;
+#X obj 208 350 / 4;
+#X msg 78 294 3;
+#X floatatom 79 381 5 0 0 0 - - -;
+#X floatatom 117 381 5 0 0 0 - - -;
+#X floatatom 156 381 5 0 0 0 - - -;
+#X floatatom 208 381 5 0 0 0 - - -;
+#X floatatom 195 294 5 0 0 0 - - -;
+#X text 260 323 You can set a fixed initial value for every equation.
+Sending a number to the left inlet fires the equation.;
+#X text 62 438 2) Some more basic math objects;
+#X obj 80 505 sqrt;
+#X msg 80 474 4;
+#X floatatom 80 533 5 0 0 0 - - -;
+#X floatatom 122 474 5 0 0 0 - - -;
+#X msg 80 566 4;
+#X floatatom 157 566 5 0 0 0 - - -;
+#X obj 80 613 pow 2;
+#X obj 130 613 pow 4;
+#X floatatom 80 649 5 0 0 0 - - -;
+#X floatatom 130 648 5 0 0 0 - - -;
+#X floatatom 179 647 8 0 0 0 - - -;
+#X obj 179 613 pow 8;
+#X text 219 509 Square root;
+#X text 238 612 Exponentiate a number;
+#X obj 19 16 ../pd_tutorial_header;
+#X connect 8 0 13 0;
+#X connect 9 0 14 0;
+#X connect 10 0 15 0;
+#X connect 11 0 16 0;
+#X connect 12 0 8 0;
+#X connect 12 0 9 0;
+#X connect 12 0 10 0;
+#X connect 12 0 11 0;
+#X connect 17 0 8 0;
+#X connect 17 0 9 0;
+#X connect 17 0 10 0;
+#X connect 17 0 11 0;
+#X connect 20 0 22 0;
+#X connect 21 0 20 0;
+#X connect 23 0 20 0;
+#X connect 24 0 26 0;
+#X connect 24 0 27 0;
+#X connect 24 0 31 0;
+#X connect 25 0 26 0;
+#X connect 25 0 27 0;
+#X connect 25 0 31 0;
+#X connect 26 0 28 0;
+#X connect 27 0 29 0;
+#X connect 31 0 30 0;

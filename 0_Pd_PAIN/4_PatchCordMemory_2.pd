@@ -1,0 +1,23 @@
+#N canvas 147 394 680 469 10;
+#X msg 195 168 1;
+#X msg 53 167 2;
+#X msg 124 167 3;
+#X obj 195 237 print;
+#X obj 53 236 print;
+#X obj 124 236 print;
+#X obj 195 122 loadbang;
+#X obj 53 122 loadbang;
+#X obj 124 122 loadbang;
+#X text 278 122 The object [loadbang] fires a bang (the DO THIS! command
+in Pd that triggers a process) at the startup of the patch. In the
+Pd windwo you can see \, that Pd is prcessing a patch from RIGHT to
+LEFT. Actually \, Pd is processing every patch from down right \, to
+top left of the patcher window. In most cases \, that won't bother
+you... but it is import to know \, as this simple example shows.;
+#X obj 19 16 ../pd_tutorial_header;
+#X connect 0 0 3 0;
+#X connect 1 0 4 0;
+#X connect 2 0 5 0;
+#X connect 6 0 0 0;
+#X connect 7 0 1 0;
+#X connect 8 0 2 0;

@@ -1,0 +1,28 @@
+#N canvas 41 43 717 687 10;
+#X text 30 105 PATCHING;
+#X text 34 262 1 Lets connect the Pd PATCHER to the Pd TERMINAL Window
+;
+#X text 101 323 Place an object:;
+#X obj 513 331 print;
+#X msg 527 410;
+#X text 48 504 2 The Print Patch;
+#X obj 512 546 print;
+#X msg 512 506 hello;
+#X text 78 541 - create MESSAGE and type in a mesage - create print
+object - connect message OUTLET to print INLET by clicking first the
+outlet \, then the inlet.;
+#X text 76 609 - switch to LIVE MODE - click tyour message an watch
+the magic in terminal window;
+#X text 30 139 The PATCHER has tow modes: EDIT MODE and LIVE MODE (Toggle:
+Edit --> Edit Mode or cmd + E);
+#X text 100 353 Type print into the object and hit enter. Now there
+is a [print] object with ONE Inlet.;
+#X text 102 414 What to print??? We need a MESSAGE: Put --> Message
+Now there is a [message box] with one INLET and one OUTLET Type a message
+of one word into the Message Box:;
+#X text 32 191 In EDIT MODE the mouse pointer is a Hand. Now you can
+edit your patch. In LIVE MODE the mouse pointer is an arrow. Now you
+can edit PARAMETERS of your PATCH OBJECTS and the Patch is actually
+running.;
+#X obj 19 16 ../pd_tutorial_header;
+#X connect 7 0 6 0;

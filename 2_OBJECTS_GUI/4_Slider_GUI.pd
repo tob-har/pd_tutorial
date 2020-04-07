@@ -1,0 +1,51 @@
+#N canvas 140 29 727 800 10;
+#X text 30 120 GUI: Slider;
+#X obj 34 160 vsl 15 128 0 127 0 0 empty empty empty 0 -9 0 10 -262144
+-1 -1 0 1;
+#X obj 80 157 hsl 128 15 0 127 0 0 empty empty empty -2 -8 0 10 -262144
+-1 -1 0 1;
+#X floatatom 34 306 5 0 0 0 - - -;
+#X floatatom 77 183 5 0 0 0 - - -;
+#X obj 38 593 hsl 128 15 0 127 0 0 empty empty empty -2 -8 0 10 -262144
+-1 -1 0 1;
+#X floatatom 35 622 5 0 0 0 - - -;
+#X obj 35 651 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X obj 35 399 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X floatatom 60 420 5 0 0 0 - - -;
+#X msg 83 453 100;
+#X msg 161 548 set 20;
+#X text 73 395 bang triggers output;
+#X text 108 414 number box sets slider value \, when in slider range
+\, triggers slider output on every value;
+#X text 144 452 message sets slider value \, triggers output;
+#X msg 102 478 -55;
+#X msg 137 480 300;
+#X text 219 544 set + argument message sets slider value \, but does
+not trgger its output. (but a bang afterwards does!);
+#X obj 194 568 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X text 253 155 Slider put out numbers. Default: from 0 to 127 (change
+in propertiers \, right click in the slider.);
+#X obj 96 268 hsl 120 30 0 1 0 0 empty empty I_send_out_from_0-1 5
+15 0 10 -99865 -260097 -228856 0 1;
+#X floatatom 93 306 5 0 0 0 - - -;
+#X text 258 266 You can change the appearance of the slider in its
+propertiers window \, too.;
+#X text 159 524 THIS IS VERY IMPORTANT AND HELPFUL;
+#X text 178 480 out of range value set slider to min or max \, but
+outputs \, the value that was sent to the slider!;
+#X obj 19 16 ../pd_tutorial_header;
+#X connect 1 0 3 0;
+#X connect 2 0 4 0;
+#X connect 5 0 6 0;
+#X connect 6 0 7 0;
+#X connect 8 0 5 0;
+#X connect 9 0 5 0;
+#X connect 10 0 5 0;
+#X connect 11 0 5 0;
+#X connect 15 0 5 0;
+#X connect 16 0 5 0;
+#X connect 18 0 5 0;
+#X connect 20 0 21 0;

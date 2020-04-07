@@ -1,0 +1,12 @@
+#N canvas 427 480 615 328 10;
+#X text 177 120 Put a Message. Select with mouse square! Copy: cmd
++ c Paste: cmd + v ...annoying... :(;
+#X text 178 148 Tip: Select \, Copy \, paste \, then move with arrow
+keys! (shift + arrow keys moves in bigger steps);
+#X text 175 93 Some patching tips:;
+#X text 176 195 Two selected objcets can be connected by pressing [cmd
++ k];
+#X text 175 233 Selectoing several objects you want to connect to one
+single object: select the many objects \, hold donw shift while connecting
+\, and connect all of them ot one object in one move.;
+#X obj 19 16 ../pd_tutorial_header;
