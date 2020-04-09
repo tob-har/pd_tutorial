@@ -1,18 +1,11 @@
 #N canvas 188 150 593 489 10;
 #N canvas 602 258 450 300 (subpatch) 0;
-#X restore 29 160 pd;
-#X text 26 32 Collecting patches \, putting them together as presets
-\, modifying preexisting patches and using multiple instances of a
-patch is crutial to handle Pd properly. To handle small parts of a
-patch properly and to clean up the canvas \, you can use subpatches.
-Subpatches look like an object on its root-canvas \, and open as an
-own canvas by clicking on it. They are stored with its root Pd patch!!!
-The sub-patcher is therefore also call pd-object:;
+#X restore 49 230 pd;
 #N canvas 341 292 450 300 subpatcher 0;
 #X obj 35 95 metro 300;
 #X obj 35 123 f;
 #X obj 64 123 + 1;
-#X floatatom 35 150 5 0 0 0 - - -, f 5;
+#X floatatom 35 150 5 0 0 0 - - -;
 #X obj 35 70 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1 1
 ;
 #X obj 35 44 loadbang;
@@ -23,21 +16,38 @@ The sub-patcher is therefore also call pd-object:;
 #X connect 2 0 1 1;
 #X connect 4 0 0 0;
 #X connect 5 0 4 0;
-#X restore 29 191 pd subpatcher;
-#X text 121 191 Subpatches can be labelled with an argument.;
+#X restore 49 261 pd subpatcher;
+#X text 141 261 Subpatches can be labelled with an argument.;
 #N canvas 331 438 450 300 counter 0;
 #X obj 46 136 metro 300;
 #X obj 46 164 f;
 #X obj 75 164 + 1;
-#X floatatom 46 191 5 0 0 0 - - -, f 5;
+#X floatatom 46 191 5 0 0 0 - - -;
 #X obj 46 111 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
 1;
 #X obj 46 85 loadbang;
 #X text 44 59 And here we hide a counter \, too!;
+#X obj 114 196 s to-receive;
 #X connect 0 0 1 0;
 #X connect 1 0 2 0;
 #X connect 1 0 3 0;
+#X connect 1 0 7 0;
 #X connect 2 0 1 1;
 #X connect 4 0 0 0;
 #X connect 5 0 4 0;
-#X restore 29 223 pd counter;
+#X restore 49 293 pd counter;
+#X obj 19 16 ../pd_tutorial_header;
+#X text 46 102 Collecting patches \, putting them together as presets
+\, modifying preexisting patches and using multiple instances of a
+patch is crutial to handle Pd properly. To handle small parts of a
+patch and to clean up the canvas \, you can use subpatches. Subpatches
+look like an object on its root-canvas \, and open as an own canvas
+by clicking on it. They are stored with its root Pd patch!!! The sub-patcher
+is therefore also call pd-object:;
+#N canvas 331 438 539 220 receive-from-counter 0;
+#X obj 47 73 r to-receive;
+#X floatatom 47 94 5 0 0 0 - - -;
+#X text 148 64 You can exchange messages between subpatches with send
+and receive;
+#X connect 0 0 1 0;
+#X restore 49 333 pd receive-from-counter;

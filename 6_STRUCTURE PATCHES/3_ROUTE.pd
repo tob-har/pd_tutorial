@@ -1,87 +1,88 @@
-#N canvas 556 37 602 741 10;
-#X text 29 41 Route is a router: It receives a message with at leas
-two atoms. The first (selector) is the adress \, where "route" will
-put out the incoming number \, symbol or list to:;
-#X obj 35 224 route 1 2 3 99;
-#X floatatom 188 188 5 0 0 0 - - -;
-#X obj 35 264 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+#N canvas 556 37 602 818 10;
+#X obj 35 284 route 1 2 3 99;
+#X floatatom 188 248 5 0 0 0 - - -;
+#X obj 35 324 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
 -1;
-#X obj 55 264 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+#X obj 55 324 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
 -1;
-#X obj 75 264 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+#X obj 75 324 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
 -1;
-#X obj 95 264 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+#X obj 95 324 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
 -1;
-#X obj 115 264 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+#X obj 115 324 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
 -1 -1;
-#X msg 35 186 1;
-#X msg 64 186 2;
-#X msg 94 187 3;
-#X msg 124 187 99;
-#X msg 154 187 5;
-#X floatatom 146 263 5 0 0 0 - - -;
-#X text 185 264 Note \, that route only sends out bangs in this case!
+#X msg 35 246 1;
+#X msg 64 246 2;
+#X msg 94 247 3;
+#X msg 124 247 99;
+#X msg 154 247 5;
+#X floatatom 146 323 5 0 0 0 - - -;
+#X text 185 324 Note \, that route only sends out bangs in this case!
 ;
-#X text 30 103 1) Use route to output bangs: Routes arguments are selectors!
+#X text 30 163 1) Use route to output bangs: Routes arguments are selectors!
 If there is only a "selector-match" \, then only a bang is generated.
 ;
-#X text 30 323 2) Giving a slector and a messages atom as input \,
+#X text 30 383 2) Giving a slector and a messages atom as input \,
 route outputs the given message and produces a bang:;
-#X obj 41 421 route 1 2;
-#X msg 41 386 1 13;
-#X msg 83 386 2 15;
-#X msg 126 386 3;
-#X obj 139 448 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+#X obj 41 481 route 1 2;
+#X msg 41 446 1 13;
+#X msg 83 446 2 15;
+#X msg 126 446 3;
+#X obj 139 508 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
 -1 -1;
-#X floatatom 41 467 5 0 0 0 - - -;
-#X floatatom 66 488 5 0 0 0 - - -;
-#X floatatom 92 509 5 0 0 0 - - -;
-#X obj 139 476 print;
-#X text 185 424 "1" and "2" are floats as selectors. The right outlets
+#X floatatom 41 527 5 0 0 0 - - -;
+#X floatatom 66 548 5 0 0 0 - - -;
+#X floatatom 92 569 5 0 0 0 - - -;
+#X obj 139 536 print;
+#X text 185 484 "1" and "2" are floats as selectors. The right outlets
 outputs everything that does not match a selector.;
-#X obj 39 638 route first second third;
-#X msg 39 570 first 1 2 3 4;
-#X msg 55 592 second select me;
-#X msg 71 614 third 3;
-#X obj 209 671 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+#X obj 39 698 route first second third;
+#X msg 39 630 first 1 2 3 4;
+#X msg 55 652 second select me;
+#X msg 71 674 third 3;
+#X obj 209 731 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
 -1 -1;
-#X obj 39 682 print;
-#X floatatom 133 683 5 0 0 0 - - -;
-#X text 242 636 The same works with symbols as selectors.;
-#X connect 1 0 3 0;
-#X connect 1 0 13 0;
-#X connect 1 1 4 0;
-#X connect 1 1 13 0;
-#X connect 1 2 5 0;
-#X connect 1 2 13 0;
-#X connect 1 3 6 0;
-#X connect 1 3 13 0;
-#X connect 1 4 7 0;
-#X connect 1 4 13 0;
-#X connect 2 0 1 0;
-#X connect 8 0 1 0;
-#X connect 9 0 1 0;
-#X connect 10 0 1 0;
-#X connect 11 0 1 0;
-#X connect 12 0 1 0;
-#X connect 17 0 21 0;
-#X connect 17 0 22 0;
-#X connect 17 0 25 0;
-#X connect 17 1 21 0;
-#X connect 17 1 23 0;
-#X connect 17 1 25 0;
-#X connect 17 2 21 0;
-#X connect 17 2 24 0;
-#X connect 18 0 17 0;
-#X connect 19 0 17 0;
-#X connect 20 0 17 0;
-#X connect 27 0 31 0;
-#X connect 27 0 32 0;
-#X connect 27 1 31 0;
-#X connect 27 1 32 0;
-#X connect 27 2 31 0;
-#X connect 27 2 32 0;
-#X connect 27 2 33 0;
-#X connect 28 0 27 0;
-#X connect 29 0 27 0;
-#X connect 30 0 27 0;
+#X obj 39 742 print;
+#X floatatom 133 743 5 0 0 0 - - -;
+#X text 242 696 The same works with symbols as selectors.;
+#X obj 19 16 ../pd_tutorial_header;
+#X text 29 101 Route is a router: It receives a message with at least
+two atoms. The first (selector) is the adress \, where "route" will
+put out the incoming number \, symbol or list to:;
+#X connect 0 0 2 0;
+#X connect 0 0 12 0;
+#X connect 0 1 3 0;
+#X connect 0 1 12 0;
+#X connect 0 2 4 0;
+#X connect 0 2 12 0;
+#X connect 0 3 5 0;
+#X connect 0 3 12 0;
+#X connect 0 4 6 0;
+#X connect 0 4 12 0;
+#X connect 1 0 0 0;
+#X connect 7 0 0 0;
+#X connect 8 0 0 0;
+#X connect 9 0 0 0;
+#X connect 10 0 0 0;
+#X connect 11 0 0 0;
+#X connect 16 0 20 0;
+#X connect 16 0 21 0;
+#X connect 16 0 24 0;
+#X connect 16 1 20 0;
+#X connect 16 1 22 0;
+#X connect 16 1 24 0;
+#X connect 16 2 20 0;
+#X connect 16 2 23 0;
+#X connect 17 0 16 0;
+#X connect 18 0 16 0;
+#X connect 19 0 16 0;
+#X connect 26 0 30 0;
+#X connect 26 0 31 0;
+#X connect 26 1 30 0;
+#X connect 26 1 31 0;
+#X connect 26 2 30 0;
+#X connect 26 2 31 0;
+#X connect 26 2 32 0;
+#X connect 27 0 26 0;
+#X connect 28 0 26 0;
+#X connect 29 0 26 0;

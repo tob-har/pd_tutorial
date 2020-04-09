@@ -1,17 +1,17 @@
-#N canvas 262 292 595 370 10;
-#X obj 91 198 *~ 0.2;
-#X obj 91 264 dac~;
-#X obj 35 28 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0 1
+#N canvas 719 579 595 370 10;
+#X obj 81 208 *~ 0.2;
+#X obj 81 274 dac~;
+#X obj 25 38 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0 1
 ;
-#X floatatom 41 120 5 0 0 0 - - -, f 5;
-#X floatatom 91 120 5 0 0 0 - - -, f 5;
-#X floatatom 141 120 5 0 0 0 - - -, f 5;
-#X msg 35 48 \; pd dsp \$1;
-#X text 39 99 Frequencies for three OSC Instances;
-#X obj 41 148 tabosc;
-#X obj 141 148 tabosc;
-#X obj 91 148 tabosc;
-#X text 200 150 Three Abstraction Instances from one Abstraction;
+#X floatatom 31 130 5 0 0 0 - - -;
+#X floatatom 81 130 5 0 0 0 - - -;
+#X floatatom 131 130 5 0 0 0 - - -;
+#X msg 25 58 \; pd dsp \$1;
+#X text 29 109 Frequencies for three OSC Instances;
+#X obj 31 158 tabosc;
+#X obj 131 158 tabosc;
+#X obj 81 158 tabosc;
+#X text 190 160 Three Abstraction Instances from one Abstraction;
 #X connect 0 0 1 0;
 #X connect 0 0 1 1;
 #X connect 2 0 6 0;

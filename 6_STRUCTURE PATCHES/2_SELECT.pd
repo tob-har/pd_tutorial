@@ -1,53 +1,55 @@
 #N canvas 556 37 594 670 10;
-#X obj 25 193 select 5;
-#X obj 25 226 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+#X obj 25 283 select 5;
+#X obj 25 316 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
 -1;
-#X obj 70 226 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+#X obj 70 316 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
 -1;
-#X floatatom 95 225 5 0 0 0 - - -;
-#X floatatom 25 167 5 0 0 0 - - -;
-#X obj 155 226 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+#X floatatom 95 315 5 0 0 0 - - -;
+#X floatatom 25 257 5 0 0 0 - - -;
+#X obj 175 316 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
 -1 -1;
-#X obj 200 226 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+#X obj 220 316 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
 -1 -1;
-#X obj 155 193 select hamster;
-#X symbolatom 236 224 10 0 0 0 - - -;
-#X msg 227 126 symbol cat;
-#X msg 299 126 symbol hamster;
-#X msg 156 126 symbol dog;
-#X text 21 23 If you need to select from a list \, use the select object.
-;
-#X msg 70 167 8;
-#X msg 236 169 symbol dog;
-#X text 21 52 1) With one argument \, select can work as a trigger.
+#X obj 175 283 select hamster;
+#X symbolatom 256 314 10 0 0 0 - - -;
+#X msg 247 216 symbol cat;
+#X msg 319 216 symbol hamster;
+#X msg 176 216 symbol dog;
+#X text 21 113 If you need to select from a list \, use the select
+object.;
+#X msg 70 257 8;
+#X msg 256 259 symbol dog;
+#X text 21 142 1) With one argument \, select can work as a trigger.
 It sends out a bang \, when the incoming float or symbl matches its
 argument. The argument can be changed via the cold inlet.;
-#X text 27 271 2) When set up with several arguments \, select creates
+#X text 27 361 2) When set up with several arguments \, select creates
 a bang on every correspondend outlet and outputs every other value
 at its rightmost outlet:;
-#X obj 27 362 sel 1 2 3 4;
-#X obj 27 399 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+#X obj 27 452 sel 1 2 3 4;
+#X obj 27 489 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
 -1;
-#X obj 47 399 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+#X obj 47 489 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
 -1;
-#X obj 67 399 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+#X obj 67 489 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
 -1;
-#X obj 87 399 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+#X obj 87 489 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
 -1;
-#X floatatom 110 399 5 0 0 0 - - -;
-#X floatatom 27 336 5 0 0 0 - - -;
-#X obj 202 390 bng 15 250 50 0 empty empty empty 0 -6 0 10 -262144
+#X floatatom 110 489 5 0 0 0 - - -;
+#X floatatom 27 426 5 0 0 0 - - -;
+#X obj 202 480 bng 15 250 50 0 empty empty empty 0 -6 0 10 -262144
 -1 -1;
-#X obj 202 341 tgl 15 0 empty empty empty 0 -6 0 10 -262144 -1 -1 0
+#X obj 202 431 tgl 15 0 empty empty empty 0 -6 0 10 -262144 -1 -1 0
 1;
-#X obj 221 390 bng 15 250 50 0 empty empty empty 0 -6 0 10 -262144
+#X obj 221 480 bng 15 250 50 0 empty empty empty 0 -6 0 10 -262144
 -1 -1;
-#X obj 202 362 sel 0 1;
-#X text 27 456 3) Select Modes: float and symbol If the first argument
+#X obj 202 452 sel 0 1;
+#X obj 19 16 ../pd_tutorial_header;
+#X text 326 259 Change argument here.;
+#X text 27 546 3) Select Modes: float and symbol If the first argument
 is a float \, select works in float mode and will distribute according
 to the floats in its arguments. If the first argument is a symbol (a
 text string) \, slect will handle every atom as a symbol. So string
-needs teh syntax "symbol string" and even flaots need "symbol 300"
+needs the syntax "symbol string" and even flaots need "symbol 300"
 because they will be read as a symbol string!;
 #X connect 0 0 1 0;
 #X connect 0 1 2 0;
