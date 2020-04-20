@@ -1,4 +1,4 @@
-#N canvas 471 422 790 603 10;
+#N canvas 334 23 790 603 10;
 #X text 97 490 Setup Pd:;
 #X text 85 129 Pd Vanilla 0.48 Pd Vanilla 0.49-1 Pd Extended Pd ...
 ;
@@ -19,7 +19,9 @@ part of the so called Pd Vanilla Distribution are called externals.
 The idea behind that is: Everybody using Pd Vanilla has the same objects
 \, and if you put an external into your code \, then you know about
 it \, and can include it \, if you share your patch.;
+#X obj 19 16 ../pd_tutorial_header;
 #X text 96 515 1) Download Pd Vanilla \, latest Versin (Several Distributions
 can live on the same machine \, so donwload more versions \, if necessary)
 2) Let Pd create the standard externals folder. go for it.;
-#X obj 19 16 ../pd_tutorial_header;
+#X text 96 562 the latest version of vanilla can be found here:;
+#X text 97 576 http://msp.ucsd.edu/software.html;

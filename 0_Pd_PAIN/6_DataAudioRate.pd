@@ -1,24 +1,16 @@
-#N canvas 221 239 697 607 10;
+#N canvas 215 23 758 742 10;
 #X obj 36 159 loadbang;
 #X floatatom 36 302 5 0 0 0 - - -;
 #X msg 36 268 2;
 #X obj 36 370 print;
 #X msg 36 337 Hello world!;
-#X obj 36 524 dac~;
+#X obj 36 567 dac~;
 #X obj 36 449 osc~ 333;
 #X msg 36 223 \; pd dsp \$1;
 #X msg 36 180 1;
-#X obj 36 201 tgl 15 0 empty empty empty 17 7 0 10 -261234 -1 -1 1
+#X obj 36 201 tgl 15 0 empty empty empty 17 7 0 10 -261234 -1 -1 0
 1;
-#X obj 36 484 *~ 0.1;
 #X text 56 202 TURN ON/OFF AUDIO HERE;
-#X text 32 92 Pd distinguishes between two control rates for connecting
-objects: control data and audio signal. Control data is sent via thin
-cabels. Audio signals are sent via thick cabels.;
-#X text 249 154 Here the bang at startup is send to the message [1]
-that will cause the checkbox to be checked turning \, sending out the
-message [1] (or [0] if unchecked) and thus turning audio ON/OFF. This
-is control rate data.;
 #X text 121 336 CLICK ME;
 #X text 66 266 CLICK ME;
 #X text 248 267 This sends the message [2] to a so called number box.
@@ -30,11 +22,44 @@ a tone \, which is attenuated in volume by the math object [*~] and
 put out in the world via the digital-analog-converter [dac~] object.
 ;
 #X obj 19 16 ../pd_tutorial_header;
+#X obj 36 536 *~ 0.05;
+#X obj 108 515 hsl 128 15 0 1 0 1 empty empty empty -2 -8 0 10 -262144
+-1 -1 635 1;
+#X text 18 82 Pd distinguishes between two calculation speeds for passing
+data between objects: control rate (slow) and audio rate (= sampling
+rate). Control data is sent via thin cables. Audio signals are sent
+via thick cables., f 72;
+#X text 249 154 Here the bang at startup is send to the message [1]
+that will cause the checkbox to be checked turning \, sending out the
+message [1] (or [0] if unchecked) and thus turning audio ON/OFF.;
+#X text 249 202 This is control rate data.;
+#X text 248 284 This is control rate data.;
+#X text 250 362 This is control rate data.;
+#X text 252 528 moving the slider changes the volume: if you move it
+fast \, you hear clicks. the slider transmits control rate data (slow)
+to an audio object (fast). this can cause clicks.;
+#X text 254 513 conflicts between control rate + audio rate:;
+#X text 252 599 for a solution look up 9_PD_AUDIO/5.1_LINE FADE.pd
+;
+#X obj 35 724 dac~;
+#X obj 35 606 osc~ 333;
+#X obj 106 628 hsl 128 15 0 1 0 1 empty empty empty -2 -8 0 10 -262144
+-1 -1 0 1;
+#X obj 103 670 line~;
+#X obj 35 693 *~;
+#X msg 103 649 \$1 10;
 #X connect 0 0 8 0;
 #X connect 2 0 1 0;
 #X connect 4 0 3 0;
-#X connect 6 0 10 0;
+#X connect 6 0 17 0;
 #X connect 8 0 9 0;
 #X connect 9 0 7 0;
-#X connect 10 0 5 0;
-#X connect 10 0 5 1;
+#X connect 17 0 5 0;
+#X connect 17 0 5 1;
+#X connect 18 0 17 1;
+#X connect 28 0 31 0;
+#X connect 29 0 32 0;
+#X connect 30 0 31 1;
+#X connect 31 0 27 0;
+#X connect 31 0 27 1;
+#X connect 32 0 30 0;
