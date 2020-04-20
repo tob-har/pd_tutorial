@@ -8,11 +8,11 @@
 #X msg 35 313 1 am a l1st 2;
 #X obj 35 345 print list3;
 #X text 160 310 Obviously a list with floats and strings.;
-#X text 31 104 Now its time to deal with messages \, that contain more
-then one value atoms: a [list];
 #X text 150 184 The print object can prepend a label: here [list1]
 ;
 #X obj 19 16 ../pd_tutorial_header;
+#X text 31 104 Now its time to deal with messages \, that contain more
+then one value atom: a [list];
 #X connect 1 0 0 0;
 #X connect 2 0 3 0;
 #X connect 6 0 7 0;

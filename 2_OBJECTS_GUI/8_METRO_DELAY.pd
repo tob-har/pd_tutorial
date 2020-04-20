@@ -1,4 +1,4 @@
-#N canvas 168 126 599 673 10;
+#N canvas 168 105 599 673 10;
 #X obj 46 340 metro 1000;
 #X obj 46 374 bng 15 50 10 0 empty empty empty 17 7 0 10 -262144 -1
 -1;
@@ -27,6 +27,11 @@ sends out bangs;
 #X text 45 439 The DELAY Object outputs ONE bang after the given milliseconds
 have passed:;
 #X obj 19 16 ../pd_tutorial_header;
+#X text 211 505 IMPORTANT: if you send another bang to delay \, before
+the delaytime is over \, it will cancel the first bang.;
+#X text 211 540 try it out: with the delay time at 1000ms \, click
+fast several times on the input bang -> there will only one bang come
+out!;
 #X connect 0 0 1 0;
 #X connect 2 0 0 0;
 #X connect 3 0 0 0;

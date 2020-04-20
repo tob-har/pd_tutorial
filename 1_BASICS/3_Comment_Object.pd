@@ -1,4 +1,4 @@
-#N canvas 198 88 695 720 10;
+#N canvas 198 58 695 720 10;
 #X text 67 216 click: Put --> Object;
 #X obj 367 236;
 #X text 68 238 click an place empty object in the patcher:;
@@ -6,15 +6,11 @@
 #X text 282 281 place a second object;
 #X text 370 318 or a third one:;
 #X obj 477 317;
-#X text 259 343 (remeber the HELP: right click on a empty object -->
-help);
 #X text 79 429 Put --> Comment creates a text file that is only a help
 within the patcher and has NO EFFECT on the running patch.;
 #X obj 82 487;
 #X text 127 481 Type a command into an empty OBJECT box to make the
 obeject behave in a certain way.;
-#X text 270 570 Place some empty object boxes and comments on the canvas...
-This can already by somehow nice.;
 #X obj 318 614;
 #X obj 358 614;
 #X text 320 644 #########;
@@ -26,3 +22,7 @@ patchchords.;
 #X text 33 191 1 Placing obects via the menu;
 #X text 35 396 2 We now know objects and commets;
 #X obj 19 16 ../pd_tutorial_header;
+#X text 259 343 (remember the HELP: right click on a empty object -->
+help);
+#X text 270 570 Place some empty object boxes and comments on the canvas...
+This can already be somehow nice.;

@@ -9,24 +9,24 @@
 #X msg 55 159 1 -3 1.234 -1.234;
 #X text 52 95 To split a list in its single atoms \, use the unpack
 object:;
-#X text 53 271 comment;
 #X floatatom 55 321 5 0 0 0 - - -;
 #X floatatom 97 322 5 0 0 0 - - -;
 #X obj 55 400 print;
 #X obj 55 347 pack f f f;
 #X floatatom 139 321 5 0 0 0 - - -;
 #X msg 55 374 \$2 \$1 \$3;
-#X text 57 280 The $ sign can be used to change the order of a list:
+#X text 52 293 The $ sign can be used to change the order of a list:
 ;
 #X obj 19 16 ../pd_tutorial_header;
+#X text 53 271;
 #X connect 0 0 1 0;
 #X connect 0 1 2 0;
 #X connect 0 2 3 0;
 #X connect 0 3 4 0;
 #X connect 5 0 6 0;
 #X connect 6 0 0 0;
-#X connect 9 0 12 0;
-#X connect 10 0 12 1;
-#X connect 12 0 14 0;
-#X connect 13 0 12 2;
-#X connect 14 0 11 0;
+#X connect 8 0 11 0;
+#X connect 9 0 11 1;
+#X connect 11 0 13 0;
+#X connect 12 0 11 2;
+#X connect 13 0 10 0;

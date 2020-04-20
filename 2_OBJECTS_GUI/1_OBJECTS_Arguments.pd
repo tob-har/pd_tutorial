@@ -1,47 +1,50 @@
-#N canvas 470 60 597 836 10;
+#N canvas 404 31 597 755 10;
 #X text 57 110 Objects and their ARGUMENTS (... and a little bit of
 math);
-#X obj 62 158 int;
-#X obj 62 189 float;
-#X obj 65 295 int 5;
-#X floatatom 65 339 5 0 0 0 - - -;
-#X obj 65 262 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+#X obj 62 203 int;
+#X obj 61 149 float;
+#X obj 65 331 int 5;
+#X floatatom 65 375 5 0 0 0 - - -;
+#X obj 65 298 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
 -1;
-#X text 202 296 here we set different ARGUMENTS. Bang triggers output.
+#X text 202 332 here we set different ARGUMENTS. Bang triggers output.
 ;
-#X obj 109 295 float 3.6;
-#X obj 109 262 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+#X obj 109 331 float 3.6;
+#X obj 109 298 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
 -1 -1;
-#X floatatom 65 636 5 0 0 0 - - -;
-#X floatatom 66 406 5 0 0 0 - - -;
-#X msg 158 475 3.8;
-#X msg 189 488 -3;
-#X floatatom 158 636 5 0 0 0 - - -;
-#X floatatom 263 514 5 0 0 0 - - -;
-#X text 299 513 shift + click & drag for decimals!;
-#X text 171 155 the [int] object can store an integer;
-#X text 172 188 the [float] object can store a decimal floating point
-number;
-#X obj 102 158 i;
-#X obj 112 189 f;
-#X obj 65 600 i;
-#X obj 158 600 f;
-#X text 174 205 by default \, their argument (value) is 0;
-#X text 174 428 floats get truncated by the [i] object;
-#X msg 101 431 2.345;
-#X text 174 401 Number sets and outputs [i] argmuent instantly;
+#X floatatom 65 672 5 0 0 0 - - -;
+#X floatatom 66 442 5 0 0 0 - - -;
+#X msg 158 511 3.8;
+#X msg 189 524 -3;
+#X floatatom 158 672 5 0 0 0 - - -;
+#X floatatom 263 550 5 0 0 0 - - -;
+#X text 299 549 shift + click & drag for decimals!;
+#X obj 102 203 i;
+#X obj 111 149 f;
+#X obj 65 636 i;
+#X obj 158 636 f;
+#X text 174 464 floats get truncated by the [i] object;
+#X msg 101 467 2.345;
+#X text 174 437 Number sets and outputs [i] argmuent instantly;
 #X obj 19 16 ../pd_tutorial_header;
+#X text 59 238 By default \, every number in PD is a float. sometimes
+it can be helpful to use integer (whole number);
+#X text 171 148 the [float] object stores a decimal floating point
+number.;
+#X text 173 165 by default (without an argument) its value is 0;
+#X text 171 200 the [int] object can store an integer. default is also
+0;
 #X connect 3 0 4 0;
 #X connect 5 0 3 0;
 #X connect 7 0 4 0;
 #X connect 8 0 7 0;
-#X connect 10 0 20 0;
-#X connect 11 0 20 0;
-#X connect 11 0 21 0;
-#X connect 12 0 20 0;
-#X connect 12 0 21 0;
-#X connect 14 0 21 0;
-#X connect 14 0 20 0;
-#X connect 20 0 9 0;
-#X connect 21 0 13 0;
-#X connect 24 0 20 0;
+#X connect 10 0 18 0;
+#X connect 11 0 18 0;
+#X connect 11 0 19 0;
+#X connect 12 0 18 0;
+#X connect 12 0 19 0;
+#X connect 14 0 19 0;
+#X connect 14 0 18 0;
+#X connect 18 0 9 0;
+#X connect 19 0 13 0;
+#X connect 21 0 18 0;

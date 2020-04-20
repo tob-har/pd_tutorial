@@ -1,4 +1,4 @@
-#N canvas 215 23 758 742 10;
+#N canvas 215 23 758 781 10;
 #X obj 36 159 loadbang;
 #X floatatom 36 302 5 0 0 0 - - -;
 #X msg 36 268 2;
@@ -8,7 +8,7 @@
 #X obj 36 449 osc~ 333;
 #X msg 36 223 \; pd dsp \$1;
 #X msg 36 180 1;
-#X obj 36 201 tgl 15 0 empty empty empty 17 7 0 10 -261234 -1 -1 0
+#X obj 36 201 tgl 15 0 empty empty empty 17 7 0 10 -261234 -1 -1 1
 1;
 #X text 56 202 TURN ON/OFF AUDIO HERE;
 #X text 121 336 CLICK ME;

@@ -4,16 +4,16 @@
 #X msg 32 196 1 2 3 4;
 #X msg 32 221 \$1 \$2 \$1 \$2 \$1 \$2 \$1 \$2;
 #X obj 32 247 print;
-#X text 29 102 ... and there is more thing to know about $ and lists:
-;
 #X floatatom 33 305 5 0 0 0 - - -;
 #X msg 33 335 list me show number the \$1;
 #X msg 33 369 \$2 \$1 \$4 \$3 \$5;
 #X obj 33 403 print sentence;
 #X text 185 406 Got it? :-);
 #X obj 19 16 ../pd_tutorial_header;
+#X text 29 102 ... and there is more things to know about $ and lists:
+;
 #X connect 1 0 2 0;
 #X connect 2 0 3 0;
+#X connect 4 0 5 0;
 #X connect 5 0 6 0;
 #X connect 6 0 7 0;
-#X connect 7 0 8 0;

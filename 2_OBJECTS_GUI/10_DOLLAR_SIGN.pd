@@ -1,4 +1,4 @@
-#N canvas 145 23 640 950 10;
+#N canvas 339 26 640 755 10;
 #X msg 83 225 3;
 #X obj 83 305 print;
 #X msg 116 225 56;
@@ -12,8 +12,6 @@ as the SYMBOL atom by the $ variable:;
 #X msg 83 266 \$1;
 #X text 68 95 Now that we know about selectors and values beeing single
 atoms \, lets have a closer look on variable messages.;
-#X text 215 276 $ always needs an number index number >=1 (\$1 \, \$2
-\, \$3 \, etc.);
 #X msg 101 502 \$1;
 #X symbolatom 154 534 10 0 0 0 - - -;
 #X obj 101 534 print;
@@ -36,19 +34,27 @@ out the first message "text".;
 will be read out as the messagea atom \,;
 #X text 67 125 In Pd the dollar sign $ is an empty variable that can
 be filled with an atom.;
-#X text 214 257 The [\$1] message can store one float message.;
 #X obj 19 16 ../pd_tutorial_header;
+#X text 214 253 The [\$1] message can pass one float message.;
+#X msg 447 314 \$10;
+#X floatatom 447 339 5 0 0 0 - - -;
+#X msg 447 292 123;
+#X text 215 276 $ always needs an index number between 1 -9 (\$1 \,
+\$2 \, \$3 \, etc.) \$10 and greater does not work:;
+#X text 477 290 <- click and watch TERMINAL;
 #X connect 0 0 8 0;
 #X connect 2 0 8 0;
 #X connect 3 0 8 0;
 #X connect 8 0 1 0;
 #X connect 8 0 4 0;
-#X connect 11 0 12 0;
-#X connect 11 0 13 0;
-#X connect 14 0 16 0;
-#X connect 16 0 15 0;
-#X connect 16 0 17 0;
-#X connect 20 0 16 0;
-#X connect 21 0 11 0;
+#X connect 10 0 11 0;
+#X connect 10 0 12 0;
+#X connect 13 0 15 0;
+#X connect 15 0 14 0;
+#X connect 15 0 16 0;
+#X connect 19 0 15 0;
+#X connect 20 0 10 0;
+#X connect 22 0 23 0;
 #X connect 23 0 24 0;
-#X connect 24 0 25 0;
+#X connect 29 0 30 0;
+#X connect 31 0 29 0;

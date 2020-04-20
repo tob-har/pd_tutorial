@@ -1,13 +1,16 @@
 #N canvas 531 49 613 405 10;
 #X text 20 89 1 Pure Data consists of two windows;
 #X text 19 235 2 The Patching;
-#X text 67 265 Withing the patcher \, different kind of [objects] can
-be placed on the canvas. Objects can interact by patching them together
-with chords from their outlets to inlets. A patch \, consiting of various
-objects then can be runned in realtime to process what it is intended
-to do.;
-#X text 57 120 Terminal Window or Pd window allows turning ON/OFF digital
-signal pocessing (DSP) and printing messages. The Patcher (this window
-\, you are reading in now) or canvas is the actual playground for object
-based coding \, called patching.;
 #X obj 19 16 ../pd_tutorial_header;
+#X text 56 188 b) The Patcher (this window \, you are reading in now)
+or canvas is the actual playground for object based coding \, called
+patching.;
+#X text 57 120 a) Terminal Window or Pd window (also known as "console")allows
+turning ON/OFF digital signal pocessing (DSP) and printing messages.
+Also error messages will appear here \, so its good to keep an eye
+on it or call it with cmd-R (apple) or ctrl-R (windows).;
+#X text 54 264 Within the patcher \, different kind of [objects] can
+be placed on the canvas. Objects can interact by patching them together
+with chords from their outlets (on the bottom of an object box) to
+inlets (on the top). A patch \, consisting of various objects then
+can be run in realtime to process what it is intended to do.;

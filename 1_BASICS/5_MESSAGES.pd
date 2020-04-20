@@ -1,4 +1,4 @@
-#N canvas 545 72 773 849 10;
+#N canvas 507 23 773 755 10;
 #X text 30 105 Lets understand MESSAGES;
 #X text 34 197 Here we go:;
 #X obj 87 277 print;
@@ -22,9 +22,6 @@ to one INLET);
 #X text 297 641 one MESSAGE with NUMBERS and SYMBOLS as ELEMENTS;
 #X msg 132 640 1 2 3 hello 4 5 6 world;
 #X msg 168 691 1 \, 2 \, hello \, world \, 3 \, 4;
-#X text 31 140 In Pd every information is send as a MESSAGE. A MESSAGE
-consits of its atoms. Those ELEMENTS can only by NUMBERS or SYMBOLS
-;
 #X msg 277 455 1;
 #X obj 280 497 print;
 #X floatatom 383 463 5 0 0 0 - - -;
@@ -32,6 +29,9 @@ consits of its atoms. Those ELEMENTS can only by NUMBERS or SYMBOLS
 #X text 220 318 MESSAGE of three ELEMENTS \, aka LIST;
 #X msg 319 453 word;
 #X obj 19 16 ../pd_tutorial_header;
+#X text 31 140 In Pd every information is send as a MESSAGE. A MESSAGE
+consists of its atoms. Those ELEMENTS can only be NUMBERS or SYMBOLS
+;
 #X connect 3 0 2 0;
 #X connect 6 0 5 0;
 #X connect 8 0 7 0;
@@ -42,6 +42,6 @@ consits of its atoms. Those ELEMENTS can only by NUMBERS or SYMBOLS
 #X connect 15 0 14 0;
 #X connect 19 0 14 0;
 #X connect 20 0 14 0;
-#X connect 22 0 23 0;
-#X connect 25 0 24 0;
-#X connect 27 0 23 0;
+#X connect 21 0 22 0;
+#X connect 24 0 23 0;
+#X connect 26 0 22 0;

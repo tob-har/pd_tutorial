@@ -3,9 +3,9 @@
 -1 -1 7100 1;
 #X obj 72 202 vsl 15 128 0 127 0 0 empty empty empty 0 -9 0 10 -262144
 -1 -1 0 1;
-#X text 32 98 Some GUI Objects can store their last value and do not
-initialise (INIT) on startup. click on NO INIT in propertiers. On patch
-startup they will have their last safed value.;
 #X text 97 204 no init;
 #X text 62 158 init;
 #X obj 19 16 ../pd_tutorial_header;
+#X text 32 98 Some GUI Objects can store their last value and initialise
+it (INIT) on startup. click on NO INIT in propertiers. On patch startup
+they will have their last saved value.;

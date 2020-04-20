@@ -1,9 +1,8 @@
-#N canvas 106 23 635 843 10;
+#N canvas 80 23 765 755 10;
 #X obj 59 188, f 5;
 #X obj 60 219 iNt;
 #X obj 59 251 int;
 #X text 139 186 empty object box;
-#X text 140 217 wrong object box;
 #X text 141 252 correct object (remeber: right click --> help);
 #X text 28 310 2 MESSAGE Box;
 #X msg 60 346;
@@ -12,10 +11,9 @@
 #X msg 59 410 1;
 #X text 140 153 They performe codes actions! Typing is case sensitive!!!
 ;
-#X text 147 306 Interactive for being clickable!!!;
+#X text 147 310 Interactive for being clickable!!!;
 #X floatatom 67 519 5 0 0 0 - - -;
 #X floatatom 68 573 5 0 0 0 - - -;
-#X text 152 572 Shift Click & drag changed dezimal values;
 #X floatatom 68 545 5 0 0 0 - - -;
 #X floatatom 68 608 5 0 0 0 - - -;
 #X symbolatom 68 660 10 0 0 0 - - -;
@@ -24,7 +22,12 @@
 #X text 154 543 click & write / click + drag IN LIVE MODE!!!;
 #X text 159 656 click & write + enter;
 #X text 39 719 4 COMMENT box;
-#X text 70 755 comment;
-#X text 168 753 click and write + enter IN EDIT MODE!!!;
-#X text 22 114 All the object types;
+#X text 72 743 comment;
+#X text 167 744 click and write + enter IN EDIT MODE!!!;
 #X obj 19 16 ../pd_tutorial_header;
+#X text 140 217 wrong object box: look in TERMINAL window: it says
+" iNt ... couldn't create" -> the object "iNt" doesn´t exist;
+#X text 152 572 Shift Click & drag changes in decimal values;
+#X text 22 114 Most common object types;
+#X text 41 775 5 other types;
+#X text 164 774 look in the put-menu for more GUI objects;
